@@ -15,9 +15,8 @@ def _():
     import marimo as mo
     import json
     import polars as pl
-    import altair as alt
     import os
-    return alt, json, mo, os, pl
+    return json, mo, os, pl
 
 
 @app.cell
@@ -153,6 +152,20 @@ def _(mo):
 
 
 @app.cell
+async def _():
+    import sys
+
+    if "pyodide" in sys.modules:
+        import micropip
+        await micropip.install("umap-learn")
+        await micropip.install("plotly")
+
+    import altair as alt
+    import plotly.express as px
+    return alt, micropip, px, sys
+
+
+@app.cell
 def _(mo):
     mo.md(r"""### Original""")
     return
@@ -225,9 +238,7 @@ def _(all_embeddings, embeddings_df, pd):
 
 
 @app.cell
-def _(mo, umap_embedding_plot_2d):
-    import plotly.express as px
-
+def _(mo, px, umap_embedding_plot_2d):
     # 2D Scatter Plot
     mo.ui.plotly(
     px.scatter(
@@ -237,7 +248,7 @@ def _(mo, umap_embedding_plot_2d):
         facet_col_spacing=0.1
     )
     )
-    return (px,)
+    return
 
 
 @app.cell
