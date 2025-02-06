@@ -89,7 +89,6 @@ def _(mo, os, pd, pickle, texts):
         **{f"dim_{i}": [emb[i] for emb in final_embeddings] for i in range(len(final_embeddings[0]))}
     })
 
-    embeddings_df = embeddings_df[:500]
     embeddings_df
     return CACHE_FILE, cache, embeddings_df, f, final_embeddings
 
@@ -97,7 +96,6 @@ def _(mo, os, pd, pickle, texts):
 @app.cell
 def _(mo, os, pd, pickle, texts):
     CACHE_FILE2 = str(mo.notebook_location() / "public" / "embeddings_cache2.pkl")
-    BATCH_SIZE = 1000  # Adjust based on OpenAI's rate limits
 
     # Load cache if it exists
     if os.path.exists(CACHE_FILE2):
@@ -116,16 +114,8 @@ def _(mo, os, pd, pickle, texts):
         **{f"dim_{i}": [emb2[i] for emb2 in final_embeddings2] for i in range(len(final_embeddings2[0]))}
     })
 
-    custom_embeddings_df = custom_embeddings_df[:500]
     custom_embeddings_df
-    return (
-        BATCH_SIZE,
-        CACHE_FILE2,
-        cache2,
-        custom_embeddings_df,
-        f2,
-        final_embeddings2,
-    )
+    return CACHE_FILE2, cache2, custom_embeddings_df, f2, final_embeddings2
 
 
 @app.cell
@@ -167,7 +157,7 @@ def _(all_embeddings, embeddings_df, pd):
     from scipy.stats import zscore
 
     # UMAP Projection
-    features = all_embeddings[:500]
+    features = all_embeddings
     print(f"Features shape: {features.shape}")
 
     umap_2d = UMAP(n_components=20, random_state=42, init="random")
@@ -265,7 +255,7 @@ def _(mo):
 @app.cell
 def _(UMAP, all_embeddings2, custom_embeddings_df, pd, projection_3d):
     # UMAP Projection
-    features2 = all_embeddings2[:500]
+    features2 = all_embeddings2
     print(f"Features shape: {features2.shape}")
 
     umap_2d2 = UMAP(n_components=20, random_state=42, init="random")
@@ -273,7 +263,6 @@ def _(UMAP, all_embeddings2, custom_embeddings_df, pd, projection_3d):
 
     projection_2d2 = umap_2d2.fit_transform(features2)
     projection_3d2 = umap_3d2.fit_transform(features2)
-    custom_embeddings_df = custom_embeddings_df[:500]
     # Create DataFrames
     umap_embedding_plot_2d2 = pd.DataFrame(
         {
@@ -300,7 +289,6 @@ def _(UMAP, all_embeddings2, custom_embeddings_df, pd, projection_3d):
     umap_embedding_plot_2d2 = umap_embedding_plot_2d2.sample(n=min(100, 500), random_state=42)
     umap_embedding_plot_3d2 = umap_embedding_plot_3d2.sample(n=min(100, 500), random_state=42)
     return (
-        custom_embeddings_df,
         features2,
         projection_2d2,
         projection_3d2,
