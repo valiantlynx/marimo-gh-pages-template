@@ -48,14 +48,16 @@ def _(mo):
 
 
 @app.cell
-def _(mo, pd):
+def _(json, mo, pd):
+    import requests
+
     # Handle both local and remote paths for texts
     local_path = str(mo.notebook_location() / "public" / "test_texts.json")
-    data_path = local_path
-    texts_df = pd.read_json(data_path)
+    s = json.loads(requests.get(local_path).content)
+    texts_df = pd.DataFrame(s)
     texts = texts_df.iloc[:, 0].tolist() if len(texts_df.columns) == 1 else texts_df.values.flatten().tolist()
-    texts
-    return data_path, local_path, texts, texts_df
+    texts_df
+    return local_path, requests, s, texts, texts_df
 
 
 @app.cell
