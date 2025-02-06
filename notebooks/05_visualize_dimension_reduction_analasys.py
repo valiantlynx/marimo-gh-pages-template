@@ -48,14 +48,14 @@ def _(mo):
 
 
 @app.cell
-def _(json, mo, os):
-    data_path = str(mo.notebook_location() / "public" / "test_texts.json")
-    # Load cache if it exists
-    if os.path.exists(data_path):
-        with open(data_path, "rb") as text_file:
-            texts = json.load(text_file)
+def _(mo, pd):
+    # Handle both local and remote paths for texts
+    local_path = str(mo.notebook_location() / "public" / "test_texts.json")
+    data_path = local_path
+    texts_df = pd.read_json(data_path)
+    texts = texts_df.iloc[:, 0].tolist() if len(texts_df.columns) == 1 else texts_df.values.flatten().tolist()
     texts
-    return data_path, text_file, texts
+    return data_path, local_path, texts, texts_df
 
 
 @app.cell
@@ -68,16 +68,15 @@ def _(mo):
 
 
 @app.cell
-def _(mo, os, pd, pickle, texts):
-    CACHE_FILE = str(mo.notebook_location() / "public" / "embeddings_cache.pkl")
+def _(mo, pd, texts):
+    # Handle both local and remote paths for cache
+    local_path1 = str(mo.notebook_location() / "public" / "embeddings_cache.pkl")
+    CACHE_FILE = local_path1
 
-    # Load cache if it exists
-    if os.path.exists(CACHE_FILE):
-        with open(CACHE_FILE, "rb") as f:
-            cache = pickle.load(f)
-    else:
+    try:
+        cache = pd.read_pickle(CACHE_FILE)
+    except:
         cache = {}
-
 
     # Retrieve final embeddings
     final_embeddings = [cache[text] for text in texts]
@@ -90,18 +89,18 @@ def _(mo, os, pd, pickle, texts):
     })
 
     embeddings_df
-    return CACHE_FILE, cache, embeddings_df, f, final_embeddings
+    return CACHE_FILE, cache, embeddings_df, final_embeddings, local_path1
 
 
 @app.cell
-def _(mo, os, pd, pickle, texts):
-    CACHE_FILE2 = str(mo.notebook_location() / "public" / "embeddings_cache2.pkl")
+def _(mo, pd, texts):
+    # Handle both local and remote paths for cache2
+    local_path2 = str(mo.notebook_location() / "public" / "embeddings_cache2.pkl")
+    CACHE_FILE2 = local_path2
 
-    # Load cache if it exists
-    if os.path.exists(CACHE_FILE2):
-        with open(CACHE_FILE2, "rb") as f2:
-            cache2 = pickle.load(f2)
-    else:
+    try:
+        cache2 = pd.read_pickle(CACHE_FILE2)
+    except:
         cache2 = {}
 
     # Retrieve final embeddings
@@ -115,7 +114,13 @@ def _(mo, os, pd, pickle, texts):
     })
 
     custom_embeddings_df
-    return CACHE_FILE2, cache2, custom_embeddings_df, f2, final_embeddings2
+    return (
+        CACHE_FILE2,
+        cache2,
+        custom_embeddings_df,
+        final_embeddings2,
+        local_path2,
+    )
 
 
 @app.cell
