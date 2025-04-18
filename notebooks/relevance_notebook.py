@@ -11,12 +11,41 @@ def _():
 
 
 @app.cell
+def _(requests):
+    from pathlib import Path
+
+    def read_log_file(log_file_path):
+        """Read log file from either local path or URL"""
+        # Check if it's a URL (starts with http:// or https://)
+        if log_file_path.startswith(('http://', 'https://')):
+            try:
+                response = requests.get(log_file_path)
+                response.raise_for_status()  # Raise an exception for 4XX/5XX responses
+                return response.content
+            except requests.exceptions.RequestException as e:
+                raise Exception(f"Failed to download log file: {e}")
+        else:
+            # Assume it's a local file path
+            try:
+                with open(log_file_path, 'rb') as f:
+                    return f.read()
+            except FileNotFoundError:
+                raise Exception(f"Log file not found: {log_file_path}")
+            except Exception as e:
+                raise Exception(f"Failed to read log file: {e}")
+    return Path, read_log_file
+
+
+@app.cell
 def _():
     import re
     from datetime import datetime
 
 
     def parse_log_data(log_text):
+        # First, check if log_text is bytes and convert to string if needed
+        if isinstance(log_text, bytes):
+            log_text = log_text.decode('utf-8')  # or other appropriate encoding
         # Initialize data structures
         script_data = {}
         total_relevant = 0
@@ -91,268 +120,201 @@ def _():
 @app.cell
 def _():
     import pandas as pd
-    import dash
-    from dash import dcc, html
     import plotly.express as px
-    from dash.dependencies import Input, Output
+    import plotly.graph_objects as go
+    from plotly.subplots import make_subplots
 
-    def create_dashboard(data):
-        # Convert data to DataFrames for easier manipulation
-        scripts_df = pd.DataFrame([
-            {
-                'script': script,
-                'relevant': info['relevant'],
-                'irrelevant': info['irrelevant'],
-                'total': info['total'],
-                'status': info['status'],
-                'vector_errors': info.get('vector_errors', 0),
-                'relevance_ratio': info['relevant'] / info['total'] if info['total'] > 0 else 0
-            }
-            for script, info in data['scripts'].items()
-        ])
-
-        # Calculate status counts
-        status_counts = scripts_df['status'].value_counts().to_dict()
-        for status in ['completed', 'failed', 'no_data', 'started']:
-            if status not in status_counts:
-                status_counts[status] = 0
-
-        # Calculate relevance ratio safely
-        total_articles = data['total_relevant'] + data['total_irrelevant']
-        relevance_ratio = (data['total_relevant'] / total_articles * 100) if total_articles > 0 else 0
-
-        # Sort scripts by total articles
-        scripts_df = scripts_df.sort_values(by='total', ascending=False)
-
-        # Initialize the Dash app
-        app = dash.Dash(__name__, title='Scraper Log Analysis')
-
-        # Define the layout
-        app.layout = html.Div([
-            html.H1('Scraper Log Analysis Dashboard', style={'textAlign': 'center'}),
-
-            html.Div([
-                html.Div([
-                    html.H3('Overall Statistics'),
-                    html.Div([
-                        html.P(f"Total articles: {total_articles}"),
-                        html.P(f"Relevant articles: {data['total_relevant']}"),
-                        html.P(f"Irrelevant articles: {data['total_irrelevant']}"),
-                        html.P(f"Relevance ratio: {relevance_ratio:.2f}%"),
-                        html.P(f"Total scripts: {len(data['scripts'])}"),
-                        html.P(f"Completed: {status_counts['completed']}"),
-                        html.P(f"Failed: {status_counts['failed']}"),
-                        html.P(f"No data: {status_counts['no_data']}"),
-                    ], style={'marginBottom': '20px'})
-                ], style={'width': '30%', 'display': 'inline-block', 'verticalAlign': 'top', 'padding': '20px'}),
-
-                html.Div([
-                    html.H3('Relevant vs Irrelevant Articles'),
-                    dcc.Graph(
-                        id='pie-chart',
-                        figure=px.pie(
-                            names=['Relevant', 'Irrelevant'],
-                            values=[data['total_relevant'], data['total_irrelevant']],
-                            color_discrete_sequence=['#4CAF50', '#F44336'],
-                            hole=0.4
-                        ).update_layout(
-                            margin=dict(t=30, b=10, l=10, r=10),
-                            height=300
-                        )
-                    ),
-                ], style={'width': '30%', 'display': 'inline-block', 'verticalAlign': 'top', 'padding': '20px'}),
-
-                html.Div([
-                    html.H3('Script Execution Status'),
-                    dcc.Graph(
-                        id='status-bar',
-                        figure=px.bar(
-                            x=['Completed', 'Failed', 'No Data'],
-                            y=[status_counts['completed'], status_counts['failed'], status_counts['no_data']],
-                            color_discrete_sequence=['#4CAF50', '#F44336', '#FFC107']
-                        ).update_layout(
-                            xaxis_title="Status",
-                            yaxis_title="Count",
-                            margin=dict(t=30, b=10, l=10, r=10),
-                            height=300
-                        )
-                    ),
-                ], style={'width': '30%', 'display': 'inline-block', 'verticalAlign': 'top', 'padding': '20px'}),
-            ]),
-
-            html.Div([
-                html.H3('Script Performance Analysis'),
-                html.Div([
-                    html.Label('Sort by:'),
-                    dcc.Dropdown(
-                        id='sort-by',
-                        options=[
-                            {'label': 'Total Articles', 'value': 'total'},
-                            {'label': 'Relevant Articles', 'value': 'relevant'},
-                            {'label': 'Irrelevant Articles', 'value': 'irrelevant'},
-                            {'label': 'Relevance Ratio', 'value': 'relevance_ratio'}
-                        ],
-                        value='total',
-                        style={'width': '200px'}
-                    ),
-                    html.Label('Display top:'),
-                    dcc.Slider(
-                        id='display-count',
-                        min=5,
-                        max=min(50, len(scripts_df)),
-                        step=5,
-                        value=20,
-                        marks={i: str(i) for i in range(5, min(50, len(scripts_df))+1, 5)}
-                    ),
-                ], style={'width': '100%', 'display': 'flex', 'justifyContent': 'space-around', 'padding': '10px'}),
-
-                dcc.Graph(id='script-bar-chart'),
-
-                html.H3('Relevance Ratio by Script'),
-                dcc.Graph(id='relevance-bar-chart'),
-
-                html.H3('Script Details'),
-                dcc.Dropdown(
-                    id='script-selector',
-                    options=[{'label': script, 'value': script} for script in scripts_df['script']],
-                    value=scripts_df['script'].iloc[0] if not scripts_df.empty else None,
-                    style={'width': '100%'}
-                ),
-                html.Div(id='script-details')
-            ], style={'width': '95%', 'margin': 'auto', 'padding': '20px'}),
-        ])
-
-        # Define callbacks
-        @app.callback(
-            [Output('script-bar-chart', 'figure'),
-             Output('relevance-bar-chart', 'figure')],
-            [Input('sort-by', 'value'),
-             Input('display-count', 'value')]
-        )
-        def update_charts(sort_by, display_count):
-            # Sort the DataFrame
-            sorted_df = scripts_df.sort_values(by=sort_by, ascending=False).head(display_count)
-
-            # Create article count bar chart
-            bar_fig = px.bar(
-                sorted_df,
-                x='script',
-                y=['relevant', 'irrelevant'],
-                barmode='group',
-                labels={'value': 'Article Count', 'variable': 'Type'},
-                color_discrete_sequence=['#4CAF50', '#F44336']
-            ).update_layout(
-                xaxis_title="Script",
-                yaxis_title="Article Count",
-                xaxis={'categoryorder': 'total descending'},
-                legend_title="Article Type",
-                height=500
+    def generate_plotly_visualizations(data):
+        # Create a list of figures to return
+        figures = []
+    
+        # 1. Overall Relevance Pie Chart
+        total_relevant = data['total_relevant']
+        total_irrelevant = data['total_irrelevant']
+        total = total_relevant + total_irrelevant
+    
+        if total > 0:
+            labels = ['Relevant', 'Not Relevant']
+            values = [total_relevant, total_irrelevant]
+        
+            fig1 = go.Figure(data=[go.Pie(
+                labels=labels,
+                values=values,
+                hole=.3,
+                marker_colors=['#66c2a5', '#fc8d62']
+            )])
+            fig1.update_layout(
+                title_text='Overall Article Relevance',
+                annotations=[dict(text=f'{total} Articles', x=0.5, y=0.5, font_size=20, showarrow=False)]
             )
-
-            # Create relevance ratio bar chart
-            relevance_fig = px.bar(
-                sorted_df,
-                x='script',
-                y='relevance_ratio',
-                color='relevance_ratio',
-                color_continuous_scale=px.colors.sequential.Viridis
-            ).update_layout(
-                xaxis_title="Script",
-                yaxis_title="Relevance Ratio (%)",
-                xaxis={'categoryorder': 'total descending'},
-                height=500,
-                coloraxis_showscale=False
-            )
-
-            # Update x-axis layout for better readability
-            for fig in [bar_fig, relevance_fig]:
-                fig.update_xaxes(tickangle=45, tickfont=dict(size=10))
-
-            return bar_fig, relevance_fig
-
-        @app.callback(
-            Output('script-details', 'children'),
-            [Input('script-selector', 'value')]
+            figures.append(fig1)
+    
+        # 2. Script Status Summary
+        status_counts = {'completed': 0, 'failed': 0, 'no_data': 0, 'started': 0}
+        for script in data['scripts']:
+            status = data['scripts'][script]['status']
+            status_counts[status] += 1
+    
+        fig2 = go.Figure(data=[go.Bar(
+            x=list(status_counts.keys()),
+            y=list(status_counts.values()),
+            marker_color=['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3']
+        )])
+        fig2.update_layout(
+            title_text='Script Status Summary',
+            xaxis_title='Status',
+            yaxis_title='Count'
         )
-        def display_script_details(script_name):
-            if not script_name:
-                return html.Div("No script selected")
-
-            script_info = data['scripts'][script_name]
-
-            return html.Div([
-                html.H4(f"Details for {script_name}"),
-                html.Table([
-                    html.Tr([html.Td("Status"), html.Td(script_info['status'])]),
-                    html.Tr([html.Td("Total Articles"), html.Td(script_info['total'])]),
-                    html.Tr([html.Td("Relevant Articles"), html.Td(script_info['relevant'])]),
-                    html.Tr([html.Td("Irrelevant Articles"), html.Td(script_info['irrelevant'])]),
-                    html.Tr([html.Td("Relevance Ratio"), html.Td(f"{(script_info['relevant'] / script_info['total'] * 100) if script_info['total'] > 0 else 0:.2f}%")]),
-                    html.Tr([html.Td("Vector Errors"), html.Td(script_info.get('vector_errors', 0))]),
-                    html.Tr([html.Td("Error Message"), html.Td(script_info.get('error', 'None'))]),
-                ], style={'width': '100%', 'border': '1px solid black', 'borderCollapse': 'collapse'})
-            ])
-
-        return app
-
-    return Input, Output, create_dashboard, dash, dcc, html, pd, px
+        figures.append(fig2)
+    
+        # 3. Per-Script Relevance
+        if data['scripts']:
+            # Convert to DataFrame for easier plotting
+            script_df = []
+            for script, stats in data['scripts'].items():
+                script_df.append({
+                    'script': script,
+                    'relevant': stats.get('relevant', 0),
+                    'irrelevant': stats.get('irrelevant', 0),
+                    'total': stats.get('total', 0),
+                    'status': stats.get('status', 'unknown')
+                })
+        
+            script_df = pd.DataFrame(script_df)
+            if not script_df.empty:
+                # Sort by total articles
+                script_df = script_df.sort_values('total', ascending=False)
+            
+                # Keep top 10 scripts for readability
+                if len(script_df) > 10:
+                    script_df = script_df.head(10)
+                    title = 'Top 10 Scripts by Article Count'
+                else:
+                    title = 'Scripts by Article Count'
+            
+                fig3 = go.Figure()
+                fig3.add_trace(go.Bar(
+                    x=script_df['script'],
+                    y=script_df['relevant'],
+                    name='Relevant',
+                    marker_color='#66c2a5'
+                ))
+                fig3.add_trace(go.Bar(
+                    x=script_df['script'],
+                    y=script_df['irrelevant'],
+                    name='Not Relevant',
+                    marker_color='#fc8d62'
+                ))
+            
+                fig3.update_layout(
+                    title_text=title,
+                    xaxis_title='Script',
+                    yaxis_title='Article Count',
+                    barmode='stack',
+                    xaxis={'tickangle': 45}
+                )
+                figures.append(fig3)
+    
+        # 4. Relevance Rate by Script
+        if data['scripts']:
+            relevance_rates = []
+            script_names = []
+            for script, stats in data['scripts'].items():
+                total = stats.get('total', 0)
+                if total > 0:
+                    relevance_rate = (stats.get('relevant', 0) / total) * 100
+                    relevance_rates.append(relevance_rate)
+                    script_names.append(script)
+        
+            if relevance_rates:
+                # Create DataFrame and sort
+                rate_df = pd.DataFrame({
+                    'script': script_names,
+                    'relevance_rate': relevance_rates
+                })
+                rate_df = rate_df.sort_values('relevance_rate', ascending=False)
+            
+                # Keep top 10 for readability
+                if len(rate_df) > 10:
+                    rate_df = rate_df.head(10)
+                    title = 'Top 10 Scripts by Relevance Rate'
+                else:
+                    title = 'Scripts by Relevance Rate'
+            
+                fig4 = go.Figure(data=[
+                    go.Bar(
+                        x=rate_df['script'],
+                        y=rate_df['relevance_rate'],
+                        marker_color='#8da0cb'
+                    )
+                ])
+                fig4.update_layout(
+                    title_text=title,
+                    xaxis_title='Script',
+                    yaxis_title='Relevance Rate (%)',
+                    xaxis={'tickangle': 45}
+                )
+                figures.append(fig4)
+    
+        return figures
+    return generate_plotly_visualizations, go, make_subplots, pd, px
 
 
 @app.cell
-def _(create_dashboard, parse_log_data):
+def _(generate_plotly_visualizations, parse_log_data, read_log_file):
     import os
 
     def main(log_file_path):
         try:
             # Read log file
-            with open(log_file_path, 'r', encoding='utf-8') as f:
-                log_text = f.read()
+            log_text = read_log_file(log_file_path)
 
+        
             # Parse log data
             data = parse_log_data(log_text)
-
+        
             # Handle empty data safely
             total_articles = data['total_relevant'] + data['total_irrelevant']
-
+        
             # Print summary
             print(f"Total relevant articles: {data['total_relevant']}")
             print(f"Total irrelevant articles: {data['total_irrelevant']}")
-
+        
             # Avoid division by zero
             if total_articles > 0:
                 print(f"Relevance ratio: {data['total_relevant'] / total_articles * 100:.2f}%")
             else:
                 print("Relevance ratio: N/A (no articles processed)")
-
+        
             print(f"Total scripts processed: {len(data['scripts'])}")
-
+        
             # Count script statuses
             status_counts = {'completed': 0, 'failed': 0, 'no_data': 0}
             for script in data['scripts']:
+                print(script)
                 status = data['scripts'][script]['status']
                 if status in status_counts:
                     status_counts[status] += 1
                 else:
                     status_counts['failed'] += 1
-
+        
             print(f"Scripts completed successfully: {status_counts['completed']}")
             print(f"Scripts failed: {status_counts['failed']}")
             print(f"Scripts with no data: {status_counts['no_data']}")
-
-            # Create dashboard
-            app = create_dashboard(data)
-
-            # Create output directory if it doesn't exist
-            os.makedirs('output', exist_ok=True)
-
-            # Tell user how to view the dashboard
-            print("\nStarting Dash dashboard. Open http://127.0.0.1:8050/ in your browser to view the analysis.")
-            app.run(debug=True)
-
-        except FileNotFoundError:
-            print(f"Error: Log file '{log_file_path}' not found.")
+        
+            # Generate and display plotly figures
+            figures = generate_plotly_visualizations(data)
+        
+            # Display the figures
+            for fig in figures:
+                fig.show()
+            
+            return data  # Return the data for further analysis if needed
+        
         except Exception as e:
             print(f"Error analyzing log: {str(e)}")
+            import traceback
+            traceback.print_exc()
 
     return main, os
 
