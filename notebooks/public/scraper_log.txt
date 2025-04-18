@@ -1,0 +1,1897 @@
+INFO:root:Using backend URL: http://backend:8001
+INFO:root:Starting the generate all data job
+INFO:root:----------------------- Generated all data: START -----------------------
+INFO:root:Scraped newspapers: ['frolendingen_front_page.py', 'venneslatidendeNyheter_front_page.py', 'dagbladet_front_page.py', 'kraftnytt_article.py', 'smaalenene_front_page.py', 'naturvernforbundet_article.py', 'avisenagder_front_page.py', 'kraftnyttCategoryFornybarEnergi_front_page.py', 'vgTagNorskPolitikk_front_page.py', 'tv2NyheterInnenriks_front_page.py', 'example_article.py', 'e24HavOgSjoemat_front_page.py', 'hadeland_front_page.py', 'austagderbladMeninger_front_page.py', 'kv_article.py', 'aftenpostenMeninger_front_page.py', 'fvn_article.py', 'nrkYtring_front_page.py', 'pd_article.py', 'tv2MeningOgAnalyse_front_page.py', 'e24_article.py', 'fvnMagasin_front_page.py', 'austagderblad_front_page.py', 'kvMeninger_front_page.py', 'arendalstidende_front_page.py', 'dt_front_page.py', 'sorlandsavisen_front_page.py', 'hadelandMeninger_front_page.py', 'aftenbladetMeninger_front_page.py', 'energiogklima_article.py', 'hadeland_article.py', 'venneslatidendeMeninger_front_page.py', 'aftenbladetLokalt_front_page.py', 'pd_front_page.py', 'aftenposten_article.py', 'e24EmneAb925c93Eea849688deeE9ec4bfcf4f6E24Kommentarer_front_page.py', 'gat_article.py', 'gat_front_page.py', 'aftenbladetTagStavanger_front_page.py', 'vg_article.py', 'hallingdolen_front_page.py', 'fvnMening_front_page.py', 'lpMeninger_front_page.py', 'aftenpostenMeningerDebatt_front_page.py', 'setesdolen_front_page.py', 'byavisadrammenForbruker_front_page.py', 'arendalstidendeMeninger_front_page.py', 'tv2_article.py', 'venneslatidende_front_page.py', 'nrkNorge_front_page.py', 'hallingdolen_article.py', 'energiognatur_article.py', 'e24NorskOekonomi_front_page.py', 'smaalenene_article.py', 'arendalstidende_article.py', 'alt_article.py', 'gatMeninger_front_page.py', 'dagbladet_article.py', 'energiogklimaNyhet_front_page.py', 'fvn_front_page.py', 'energiognaturTagVindkraft_front_page.py', 'vgTagAmerikanskPolitikk_front_page.py', 'sorlandsavisen_article.py', 'nrkKultur_front_page.py', 'tv2Politikk_front_page.py', 'vgNyheterMeninger_front_page.py', 'avisenagder_article.py', 'nrkDebatten_front_page.py', 'frolendingenPolitikk29.9_front_page.py', 'frolendingenLeserinnlegg29.4_front_page.py', 'naturvernforbundetCategoryNyheterPaged5_front_page.py', 'austagderblad_article.py', 'dt_article.py', 'venneslatidende_article.py', 'aftenpostenMeningerKommentar_front_page.py', 'byavisadrammen_article.py', 'dagbladetMeninger_front_page.py', 'frolendingen_article.py', 'ringblad_article.py', 'e24EnergiOgKlima_front_page.py', 'lpNyheter_front_page.py', 'vgTagSamfunn_front_page.py', 'byavisadrammen_front_page.py', 'nrkNyheterFornybarEnergi1.14530755_front_page.py', 'lp_article.py', 'ta_front_page.py', 'smaaleneneMeninger_front_page.py', 'dtMeninger_front_page.py', 'ta_article.py', '__init__.py', 'setesdolen_article.py', 'aftenbladet_front_page.py', 'ringblad_front_page.py', 'aftenpostenMeningerLeder_front_page.py', 'energiognatur_front_page.py', 'nrk_article.py', 'nrkKlima_front_page.py']
+INFO:root:Filtered front pages: ['frolendingen_front_page.py', 'venneslatidendeNyheter_front_page.py', 'dagbladet_front_page.py', 'smaalenene_front_page.py', 'avisenagder_front_page.py', 'kraftnyttCategoryFornybarEnergi_front_page.py', 'vgTagNorskPolitikk_front_page.py', 'tv2NyheterInnenriks_front_page.py', 'e24HavOgSjoemat_front_page.py', 'hadeland_front_page.py', 'austagderbladMeninger_front_page.py', 'aftenpostenMeninger_front_page.py', 'nrkYtring_front_page.py', 'tv2MeningOgAnalyse_front_page.py', 'fvnMagasin_front_page.py', 'austagderblad_front_page.py', 'kvMeninger_front_page.py', 'arendalstidende_front_page.py', 'dt_front_page.py', 'sorlandsavisen_front_page.py', 'hadelandMeninger_front_page.py', 'aftenbladetMeninger_front_page.py', 'venneslatidendeMeninger_front_page.py', 'aftenbladetLokalt_front_page.py', 'pd_front_page.py', 'e24EmneAb925c93Eea849688deeE9ec4bfcf4f6E24Kommentarer_front_page.py', 'gat_front_page.py', 'aftenbladetTagStavanger_front_page.py', 'hallingdolen_front_page.py', 'fvnMening_front_page.py', 'lpMeninger_front_page.py', 'aftenpostenMeningerDebatt_front_page.py', 'setesdolen_front_page.py', 'byavisadrammenForbruker_front_page.py', 'arendalstidendeMeninger_front_page.py', 'venneslatidende_front_page.py', 'nrkNorge_front_page.py', 'e24NorskOekonomi_front_page.py', 'gatMeninger_front_page.py', 'energiogklimaNyhet_front_page.py', 'fvn_front_page.py', 'energiognaturTagVindkraft_front_page.py', 'vgTagAmerikanskPolitikk_front_page.py', 'nrkKultur_front_page.py', 'tv2Politikk_front_page.py', 'vgNyheterMeninger_front_page.py', 'nrkDebatten_front_page.py', 'frolendingenPolitikk29.9_front_page.py', 'frolendingenLeserinnlegg29.4_front_page.py', 'naturvernforbundetCategoryNyheterPaged5_front_page.py', 'aftenpostenMeningerKommentar_front_page.py', 'dagbladetMeninger_front_page.py', 'e24EnergiOgKlima_front_page.py', 'lpNyheter_front_page.py', 'vgTagSamfunn_front_page.py', 'byavisadrammen_front_page.py', 'nrkNyheterFornybarEnergi1.14530755_front_page.py', 'ta_front_page.py', 'smaaleneneMeninger_front_page.py', 'dtMeninger_front_page.py', 'aftenbladet_front_page.py', 'ringblad_front_page.py', 'aftenpostenMeningerLeder_front_page.py', 'energiognatur_front_page.py', 'nrkKlima_front_page.py']
+INFO:root:Starting data generation with 65 front pages and 97 newspapers
+INFO:root:Processing front page: frolendingen_front_page.py
+INFO:root:Filtered articles for frolendingen_front_page.py: 32
+INFO:root:Sending 104 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: – Man skal ikke bære alt selv
+INFO:root:Not relevant article: Tilgjengelig topptur til Klefjellet
+INFO:root:Not relevant article: Innrømmer dårlig håndtering av badstue-søknad
+INFO:root:Not relevant article: Se opptak fra kommunestyret 10. april
+INFO:root:Not relevant article: Frykter at gårdsbarnehagen kan bli lagt ned
+INFO:root:Not relevant article: Får nytt utdannings­tilbud i Froland
+INFO:root:Not relevant article: Fortsatt usikkert om vei­finansiering
+INFO:root:Not relevant article: Frolendinger invitert til filmfestival i Cannes
+INFO:root:Not relevant article: Foreslår drastiske kutt på 10 millioner
+INFO:root:Not relevant article: Fornøyde etter første "utenlands­turne"
+INFO:root:Relevant article: Åpner for Bøylestad-hogst tross motstand
+INFO:root:Relevant article: Nå blir plastposen dyrere
+INFO:root:Relevant article: Kan gi opptil 100 arbeidsplasser og store ringvirkninger
+INFO:root:Relevant article: Fortsatt usikkert om vei­finansiering
+INFO:root:Relevant article: Grunneiere får grønt lys: Åpner for Bøylestad-hogst tross motstand
+INFO:root:Relevant article: Nå blir plastposen dyrere
+INFO:root:Relevant article: Snart i mål med veiutbedring
+INFO:root:Relevant article: Ny storindustri på vei: Kan gi opptil 100 arbeidsplasser og store ringvirkninger
+INFO:root:Relevant article: Full fart på båtsalget: – Det begynner å snu nå
+INFO:root:Relevant articles: 9, Not relevant articles: 95
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 9 relevant articles to database. 201 - {"message":"9 records created/updated."}
+INFO:root:Completed processing for front page: frolendingen_front_page.py
+INFO:root:Processing front page: venneslatidendeNyheter_front_page.py
+INFO:root:Filtered articles for venneslatidendeNyheter_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Blir leder for 180 ansatte: – En stor oppgave
+INFO:root:Not relevant article: Tok seg inn i nedlagt skole: – Samtlige var mindre­årige
+INFO:root:Not relevant article: Ordføreren om møtet med dagsenteret: – Fantastisk
+INFO:root:Not relevant article: Elsparke­sykkel meldt stjålet
+INFO:root:Not relevant article: Varsler omkamp om tøy til hjemme­tjenesten: – Veldig urimelig
+INFO:root:Not relevant article: Kjørte uten skilter – forsvant da politiet ville stanse bilen
+INFO:root:Not relevant article: Slik gikk jakta i fjor: – Elgen trives ikke spesielt godt i Agder for tiden
+INFO:root:Not relevant article: Rykket ut til gress­brann: - Det er ganske tørt nå
+INFO:root:Not relevant article: Sykkel stjålet fra privat adresse
+INFO:root:Not relevant article: Fant stjålet scooter
+INFO:root:Relevant article: Disse startet nye bedrifter i Vennesla i årets tre første måneder
+INFO:root:Relevant article: Deler ut 17,8 millioner til kundene i bygda: – Noe jeg er stolt av
+INFO:root:Relevant article: Vi bruker mer enn dobbelt så mye på strømmetjenester - se sparetipsene
+INFO:root:Relevant article: Oppgraderer 5G-nettet – varsler om ustabilt nett de kommende dagene
+INFO:root:Relevant article: Deler ut 17,8 millioner til kundene i bygda: – Noe jeg er stolt av
+INFO:root:Relevant article: Vi bruker mer enn dobbelt så mye på strømmetjenester - se sparetipsene
+INFO:root:Relevant articles: 6, Not relevant articles: 106
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 6 relevant articles to database. 201 - {"message":"6 records created/updated."}
+INFO:root:Completed processing for front page: venneslatidendeNyheter_front_page.py
+INFO:root:Processing front page: dagbladet_front_page.py
+INFO:root:Filtered articles for dagbladet_front_page.py: 32
+INFO:root:Sending 22 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Frykt og avskypå Wall Street
+INFO:root:Not relevant article: Minstestraff er enuting
+INFO:root:Not relevant article: - Kan gjøre ossalle fattigere
+INFO:root:Not relevant article: Hylles i Italia
+INFO:root:Not relevant article: Norge heiet på Gjert
+INFO:root:Not relevant article: Preget avsvik og sorg
+INFO:root:Not relevant article: Barn og skjermbruk:Det er nok nå
+INFO:root:Not relevant article: «Kongenbefaler»
+INFO:root:Not relevant article: La oss ikke skremmehverandre
+INFO:root:Not relevant article: Renner inn: - Jeg er lei!
+INFO:root:Relevant articles: 0, Not relevant articles: 22
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: dagbladet_front_page.py
+INFO:root:Processing front page: smaalenene_front_page.py
+INFO:root:Filtered articles for smaalenene_front_page.py: 32
+INFO:root:Sending 190 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Brann i Mysen i natt: – Han var litt ivrig med fyrstikkene
+INFO:root:Not relevant article: Fullt trøkk med ungdommene på Unge krefter-festivalen
+INFO:root:Not relevant article: Jørn ble frastjålet diesel for andre gang på kort tid: – Jeg mistenker at de skal selge dette videre
+INFO:root:Not relevant article: Omfattende dieseltyveri ved Shell
+INFO:root:Not relevant article: Solgte boligen for nesten én million over prisantydning: – Markedet responderer godt på de rette objektene
+INFO:root:Not relevant article: Svein har mistet flere hundre kubikkmeter med jord: – Man vet aldri når neste flom kommer
+INFO:root:Not relevant article: Anwar (19) drømte om å bli ingeniør – nå vil han i stedet fortsette med det faren drev med
+INFO:root:Not relevant article: Etterforsket knivstikking – fant denne revolveren
+INFO:root:Not relevant article: Politiet etterlyste eieren av denne verdifulle gjenstanden – nå har en svært glad eier meldt seg
+INFO:root:Not relevant article: Har du fått med deg disse videoene?
+INFO:root:Relevant article: – Helt ufarlig å utrede vindkraft i Skiptvet
+INFO:root:Relevant article: Vet vi nok om vindturbiner i Skiptvet?
+INFO:root:Relevant article: Turbiner har ingenting i naturskogen i Skjetve å gjøre
+INFO:root:Relevant article: Våler-ordfører om vindkraft-motstand: – Mange sammenligner det med ulvedebatten
+INFO:root:Relevant articles: 4, Not relevant articles: 186
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 4 relevant articles to database. 201 - {"message":"4 records created/updated."}
+INFO:root:Completed processing for front page: smaalenene_front_page.py
+INFO:root:Processing front page: avisenagder_front_page.py
+INFO:root:Filtered articles for avisenagder_front_page.py: 32
+Error fetching the page: HTTPSConnectionPool(host='www.avisenagder.nohttps', port=443): Max retries exceeded with url: /direktesport.no/sport/fotball/4-divisjon-menn/hisoey-arendal-2-flekkefjord-2066710.html?play=true&utm_source=amedia&partner=amedia&amedia_referrer=www.avisenagder.no (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fb47a62faa0>: Failed to resolve 'www.avisenagder.nohttps' ([Errno -2] Name or service not known)"))
+Error fetching the page: HTTPSConnectionPool(host='www.avisenagder.nohttps', port=443): Max retries exceeded with url: /direktesport.no/sport/fotball/fotball-nm-menn/vaag-start-2069052.html?play=true&utm_source=amedia&partner=amedia&amedia_referrer=www.avisenagder.no (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fb47a62e6c0>: Failed to resolve 'www.avisenagder.nohttps' ([Errno -2] Name or service not known)"))
+Error fetching the page: HTTPSConnectionPool(host='www.avisenagder.nohttps', port=443): Max retries exceeded with url: /www.avisenagder.no/kvinesdal-tapte-alle-poengene-i-sluttminuttene-mot-giv-akt/s/18-9042-15295940 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fb47b566720>: Failed to resolve 'www.avisenagder.nohttps' ([Errno -2] Name or service not known)"))
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+INFO:root:Sending 183 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Vil bygge ekstra etasje for å få flere kontorplasser
+INFO:root:Not relevant article: NRK sender direkte fra Hidra og Flekkefjord sentrum på 17. mai
+INFO:root:Not relevant article: Snømangel stopper påsketuren – men FOT byr på friluftsglede likevel
+INFO:root:Not relevant article: Starter stor tunneljobb med skredsikring
+INFO:root:Not relevant article: Konkursåpning i et lokalt selskap
+INFO:root:Not relevant article: Påskepriskrigen: Kiwi knuser Rema 1000
+INFO:root:Not relevant article: Ber kommunen bruke forkjøpsrett
+INFO:root:Not relevant article:
+INFO:root:Not relevant article: Handle lokalt - IKKE SLETT!!!!
+INFO:root:Not relevant article: To tatt for brudd på forbud-skilt
+INFO:root:Relevant article: Ber om «vindkraft-signaler»
+INFO:root:Relevant article: Grønnes bad: Legger frem priser og regler for ny badstue
+INFO:root:Relevant article: Planlegger milliard-oppgraderinger
+INFO:root:Relevant article: NVE: – Langt unna målene for solkraftproduksjon og redusert strømbruk
+INFO:root:Relevant article: Brunt vann i springen: – Store deler rammet
+INFO:root:Relevant articles: 5, Not relevant articles: 178
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 5 relevant articles to database. 201 - {"message":"5 records created/updated."}
+INFO:root:Completed processing for front page: avisenagder_front_page.py
+INFO:root:Processing front page: kraftnyttCategoryFornybarEnergi_front_page.py
+INFO:root:Filtered articles for kraftnyttCategoryFornybarEnergi_front_page.py: 32
+INFO:root:Sending 50 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: Magasinfyllinga 1,9 prosent lågare enn medianen for veke 48
+INFO:root:Relevant article: Låg produksjon for årstida og nettoimport til sørlege Noreg
+INFO:root:Relevant article: 13,2 prorsent lgare magasinylling enn normalen for året i Norge
+INFO:root:Relevant article: 15,6 prosent lågare magasinfylling enn normalen for årstida i Norge
+INFO:root:Relevant article: Låg kraftproduksjon og låg nettoeksport for årstida frå sørlege Noreg
+INFO:root:Relevant article: 12 prosent lågare magasinfylling enn normalen for årstida i Norge
+INFO:root:Relevant article: Magasinfyllinga er 8,2 prosent lågare enn medianen for denne årstida i Norge
+INFO:root:Relevant article: 12,1 prosent lågare magasinfylling enn normalen for årstida i Norge
+INFO:root:Relevant article:
+INFO:root:Relevant article: 10,2 prosent lågare magasinfylling enn normalen for årstida i Norge
+INFO:root:Not relevant article: Kraftåret 2021 – historisk høye kraftpriser
+INFO:root:Not relevant article: Norske breer kartlagt på ny
+INFO:root:Relevant articles: 48, Not relevant articles: 2
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+ERROR:root:Error in article prediction/insertion: 1 validation error for Content
+tag
+  Input should be a valid string [type=string_type, input_value=['Fornybar energi,Vannmagasiner'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+ERROR:root:Entity action failed - ValueError encountered: 1 validation error for Content
+tag
+  Input should be a valid string [type=string_type, input_value=['Fornybar energi,Vannmagasiner'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+INFO:root:Completed processing for front page: kraftnyttCategoryFornybarEnergi_front_page.py
+INFO:root:Processing front page: vgTagNorskPolitikk_front_page.py
+WARNING:root:No data found for vgTagNorskPolitikk_front_page.py. Skipping this entry.
+INFO:root:Processing front page: tv2NyheterInnenriks_front_page.py
+INFO:root:Filtered articles for tv2NyheterInnenriks_front_page.py: 32
+INFO:root:Sending 78 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Klar tale om krona: – Jeg tror det blir verre før det blir bedre
+INFO:root:Not relevant article: Refser klima­ministeren: – Gjør ikke jobben sin
+INFO:root:Not relevant article: Mor og datter gravlegges sammen
+INFO:root:Not relevant article: Ines (26) er drittlei køkaos: – Helt håpløst
+INFO:root:Not relevant article: Påskeutfarten: Kommer med klar oppfordring
+INFO:root:Not relevant article: Hardt ut mot Vestre-grep: – Bidrar til rekordlange helsekøer
+INFO:root:Not relevant article: Kom med stikk mot visepresidenten – fikk sparken
+INFO:root:Not relevant article: Foreldrene bryter tausheten: Tror Jan Helge Andersen var alene om drapet
+INFO:root:Not relevant article: Advarer: – Huden er helt uforberedt
+INFO:root:Not relevant article: Kan vitne i Bhatti-rettssaken: – Han er forberedt på det
+INFO:root:Relevant article: Refser klima­ministeren: – Gjør ikke jobben sin
+INFO:root:Relevant article: – Forsøker å drukne saken før valgkampen
+INFO:root:Relevant article: Det er én grunn til å bryte seg inn her – og den skremmer
+INFO:root:Relevant article: Dette betyr tollkaoset for renten din
+INFO:root:Relevant articles: 4, Not relevant articles: 74
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 4 relevant articles to database. 201 - {"message":"4 records created/updated."}
+INFO:root:Completed processing for front page: tv2NyheterInnenriks_front_page.py
+INFO:root:Processing front page: e24HavOgSjoemat_front_page.py
+INFO:root:Filtered articles for e24HavOgSjoemat_front_page.py: 32
+INFO:root:Sending 66 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Regjeringen foreslår nye regler for lakseoppdrett
+INFO:root:Not relevant article: Mowi kjemper mot tolltrusler i Brussel
+INFO:root:Relevant article: Går av som laksesjef - skal lage eplesider på familiegården
+INFO:root:Not relevant article: Bekymret for villaksen: Machofest i elva gir få lakseegg
+INFO:root:Not relevant article: «Skrell» i norske lakseaksjer: – Negativt for etterspørselen
+INFO:root:Not relevant article: Ikke flertall for å fjerne omstridt skatteråd for laks
+INFO:root:Relevant article: Konflikt om laksepriser: – Skal ikke være uforutsigbart
+INFO:root:Not relevant article: Mowi-sjefen tjente totalt 11,3 millioner i 2024
+INFO:root:Not relevant article: Stordalen-selskaper skal redde oppdrettslaksens omdømme
+INFO:root:Not relevant article: – Sjokkerende at lakseoppdretterne ikke holdes ansvarlig
+INFO:root:Not relevant article: Witzøe-familien tar over merkevaren Salma
+INFO:root:Not relevant article: Lusereglene brytes hver uke – straffes nesten aldri
+INFO:root:Relevant article: Skader på oppdrettsanlegg: – Ingen tvil om at dette er alvorlig
+INFO:root:Relevant article: Lerøy skal gi laksen kyllingrester
+INFO:root:Relevant article: Slår lakse-alarm: – Eksistensiell krise
+INFO:root:Relevant article: Mowi tjente 2,66 mrd. på driften i fjerde kvartal
+INFO:root:Relevant article: 15.000 laks på rømmen fra Lerøy
+INFO:root:Relevant article: Regjeringen foreslår nye regler for lakseoppdrett
+INFO:root:Relevant article: Mowi kjemper mot tolltrusler i Brussel
+INFO:root:Relevant article: «Skrell» i norske lakseaksjer: – Negativt for etterspørselen
+INFO:root:Relevant articles: 20, Not relevant articles: 46
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 20 relevant articles to database. 201 - {"message":"20 records created/updated."}
+INFO:root:Completed processing for front page: e24HavOgSjoemat_front_page.py
+INFO:root:Processing front page: hadeland_front_page.py
+INFO:root:Filtered articles for hadeland_front_page.py: 32
+ERROR:root:Error processing articles - Exception occurred: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 44, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 186, in _process_articles
+    article_domain = only_get_domain_name(front_page_article.get('url', ''))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/scrapers/scarping_graph_ai_setup.py", line 63, in only_get_domain_name
+    domain = domain.split(':')[0]
+             ^^^^^^^^^^^^^^^^^
+TypeError: a bytes-like object is required, not 'str'
+INFO:root:Completed processing for front page: hadeland_front_page.py
+INFO:root:Processing front page: austagderbladMeninger_front_page.py
+WARNING:root:No data found for austagderbladMeninger_front_page.py. Skipping this entry.
+INFO:root:Processing front page: aftenpostenMeninger_front_page.py
+INFO:root:Filtered articles for aftenpostenMeninger_front_page.py: 32
+INFO:root:Sending 100 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Skal jeg bare slutte å bruke ordet doula en stund?
+INFO:root:Not relevant article: Kan vi unngå en global finanskrise?
+INFO:root:Not relevant article: Helseministerens «digitale avlastningsleger» kan virke som en god løsning, men det er utfordringer
+INFO:root:Not relevant article: Jeg synes det er smålig av Aftenposten å fremstille meg feil
+INFO:root:Not relevant article: «Fakta legges til side for billige politiske poeng.» Hvem kunne hun sikte til, tro?
+INFO:root:Not relevant article: Totalt useriøst
+INFO:root:Not relevant article: Han har fått et nytt kallenavn
+INFO:root:Not relevant article: At folk får seg hund, er ikke nytt. Det nye er hvor lite annet som får plass.
+INFO:root:Not relevant article: Vi intervjuet unge mellom 17 og 24 år om voldtekt. Dette mener de om rettferdig straff.
+INFO:root:Not relevant article: Det er dessverre mange som er like dømmende og nedlatende som Kaveh Rashidi
+INFO:root:Relevant article: Kan vi unngå en global finanskrise?
+INFO:root:Relevant article: Totalt useriøst fra Vedum og Listhaug
+INFO:root:Relevant article: Trump rygger inn i fortiden
+INFO:root:Relevant article: Norsk kyllingproduksjon trenger strengere krav – nå!
+INFO:root:Relevant articles: 4, Not relevant articles: 96
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 4 relevant articles to database. 201 - {"message":"4 records created/updated."}
+INFO:root:Completed processing for front page: aftenpostenMeninger_front_page.py
+INFO:root:Processing front page: nrkYtring_front_page.py
+INFO:root:Filtered articles for nrkYtring_front_page.py: 32
+INFO:root:Sending 30 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Snakk om risikoen
+INFO:root:Not relevant article: Jeg så for meg alle måter å avslutte livet på
+INFO:root:Not relevant article: Hvem ønsker å bli kvalt? Sånn egentlig?
+INFO:root:Not relevant article: Målfoto
+INFO:root:Not relevant article: Ukraina, ikke Midtøsten
+INFO:root:Not relevant article: Jenter er fritt vilt
+INFO:root:Not relevant article: Mine superkrefter
+INFO:root:Not relevant article: En eventyrlig flopp
+INFO:root:Not relevant article: Når teknologien har et syn på verden
+INFO:root:Not relevant article: Trusselen fra hverdagen
+INFO:root:Relevant article: Vi må velge, sier vi
+INFO:root:Relevant article: Vi må velge, sier vi
+INFO:root:Relevant articles: 2, Not relevant articles: 28
+ERROR:root:Error in article prediction/insertion: 'NoneType' object has no attribute 'strip'
+ERROR:root:Entity action failed - Exception occurred: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 44, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 116, in perform
+    source=Source(
+           ^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/.venv/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/packages/modelling/src/modelling/models.py", line 103, in validate_url
+    return format_domain(v)
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/packages/modelling/src/modelling/models.py", line 15, in format_domain
+    url = urlparse(url).hostname.strip('www.')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+INFO:root:Completed processing for front page: nrkYtring_front_page.py
+INFO:root:Processing front page: tv2MeningOgAnalyse_front_page.py
+INFO:root:Filtered articles for tv2MeningOgAnalyse_front_page.py: 32
+INFO:root:Sending 78 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: «Tid for hevn»
+INFO:root:Not relevant article: Kampen om historien
+INFO:root:Not relevant article: Trumps farlige medisin
+INFO:root:Not relevant article: Fornorskningen fortsetter i stillhet
+INFO:root:Not relevant article: Filips historie
+INFO:root:Not relevant article: Hvordan i all verden skal vi lede generasjon X?
+INFO:root:Not relevant article: Den nye datingappen
+INFO:root:Not relevant article: Mysteriet Dyukov: Hvorfor forsvant Putins mann fra Uefa-toppen?
+INFO:root:Not relevant article: Hvor kom ambisjonene fra?
+INFO:root:Not relevant article: Et massivt motangrep
+INFO:root:Relevant article: Fornorskningen fortsetter i stillhet
+INFO:root:Relevant articles: 1, Not relevant articles: 77
+ERROR:root:Error in article prediction/insertion: 1 validation error for Content
+author
+  Input should be a valid string [type=string_type, input_value=['Ida Helene Benonisen Fosen-aktivist'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+ERROR:root:Entity action failed - ValueError encountered: 1 validation error for Content
+author
+  Input should be a valid string [type=string_type, input_value=['Ida Helene Benonisen Fosen-aktivist'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+INFO:root:Completed processing for front page: tv2MeningOgAnalyse_front_page.py
+INFO:root:Processing front page: fvnMagasin_front_page.py
+INFO:root:Filtered articles for fvnMagasin_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Åpner opp om vans­kelig tid: – Jeg har slitt med meg selv
+INFO:root:Not relevant article: – Jeg tenner et lys for Kjetil hver eneste dag
+INFO:root:Not relevant article: – Hadde aldri innbilt meg at jeg skulle bli så gammel
+INFO:root:Not relevant article: – Mange tenker vel at vi ikke kan så veldig mye, men så kan vi veldig mye
+INFO:root:Not relevant article: – Det ble et sted jeg kunne få spesielle øyeblikk med barna
+INFO:root:Not relevant article: Solgte nær 700 billetter: – Sykt bra stemning
+INFO:root:Not relevant article: – Noen synes sikkert at det er veldig nerdete. Men dette er akkurat hva verden trenger nå.
+INFO:root:Not relevant article: Bli med på innsiden
+INFO:root:Not relevant article: – Du må for all del ikke kalle det jakt!
+INFO:root:Not relevant article: – Jeg har hatt noen sykt sterke opplevelser
+INFO:root:Relevant article: – Vi jobbet dag og natt for å dekke etterspørselen
+INFO:root:Relevant articles: 1, Not relevant articles: 111
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 1 relevant articles to database. 201 - {"message":"1 records created/updated."}
+INFO:root:Completed processing for front page: fvnMagasin_front_page.py
+INFO:root:Processing front page: austagderblad_front_page.py
+INFO:root:Filtered articles for austagderblad_front_page.py: 32
+INFO:root:Sending 114 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article:
+INFO:root:Not relevant article: Siste nytt
+INFO:root:Not relevant article: Stor politisk bekymring rundt butikkdød og sentrum
+INFO:root:Not relevant article: Gjerstad sa nei til vindkraft-investeringer – slik gikk det ikke i Risør
+INFO:root:Not relevant article: Gir 100.000 til denne gründeren
+INFO:root:Not relevant article: Terje har hendene fulle: – Det går mye glass
+INFO:root:Not relevant article: Bli med på nyåpningen på Coop Randvik
+INFO:root:Not relevant article: Bli med på nyåpning på Coop Randvik
+INFO:root:Not relevant article: Tagget religiøse symboler og tekst
+INFO:root:Not relevant article: Slipper å dra i fengsel etter festivalbråk - politiet var for trege
+INFO:root:Relevant article: Gjerstad sa nei til vindkraft-investeringer – slik gikk det ikke i Risør
+INFO:root:Relevant article: Nå skrus prisene trolig opp her
+INFO:root:Relevant article: Skaaland og Frp raser mot Å Energi og vindkraft-finte
+INFO:root:Relevant articles: 3, Not relevant articles: 111
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 3 relevant articles to database. 201 - {"message":"3 records created/updated."}
+INFO:root:Completed processing for front page: austagderblad_front_page.py
+INFO:root:Processing front page: kvMeninger_front_page.py
+WARNING:root:No data found for kvMeninger_front_page.py. Skipping this entry.
+INFO:root:Processing front page: arendalstidende_front_page.py
+INFO:root:Filtered articles for arendalstidende_front_page.py: 32
+INFO:root:Sending 60 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Vårens vakreste modelljernbane-eventyr
+INFO:root:Not relevant article: Ungdomsmusikken helt til topps
+INFO:root:Not relevant article: Byorkesteret til NM med mange unge i rekkene
+INFO:root:Not relevant article: Lokal Pink Floyd tribute for fullsatt sal
+INFO:root:Not relevant article: Kirkekonsert med Frøydis Grorud og Peter Hallström
+INFO:root:Not relevant article: Chicago kommer til Arendal
+INFO:root:Not relevant article: Fjerdeklasser fra fem skoler i Arendal er med på jakten
+INFO:root:Not relevant article: Feirer dobbeltjubileum
+INFO:root:Not relevant article: Skattejakter på finn.no
+INFO:root:Not relevant article: True Crime Festivalen ble Årets Markedsfører
+INFO:root:Relevant article: Fjerdeklasser fra fem skoler i Arendal er med på jakten
+INFO:root:Relevant article: Gard åpner to nyekontor i Danmark
+INFO:root:Relevant articles: 2, Not relevant articles: 58
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: arendalstidende_front_page.py
+INFO:root:Processing front page: dt_front_page.py
+INFO:root:Filtered articles for dt_front_page.py: 32
+INFO:root:Sending 234 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article:
+INFO:root:Not relevant article: Flere uten forsikring: – Står i sjokk og krise
+INFO:root:Not relevant article: Tar avstand: – Må stå for deres regning
+INFO:root:Not relevant article: Storbrannen på Landfalløya: Dette sier politiet om brannårsaken
+INFO:root:Not relevant article: I sorg etter dødsfall: – Vil prege mange av oss
+INFO:root:Not relevant article: Andrejs (38) etter marerittdøgnet: – Jeg vet ikke hva jeg skal gjøre
+INFO:root:Not relevant article: Babymat trekkes fra markedet
+INFO:root:Not relevant article:
+INFO:root:Not relevant article: Slik ser det ut på brannåstedet dagen derpå
+INFO:root:Not relevant article: Kokken besøker tradisjonsrikt spisested: – Hadde håpet på mer kjærlighet
+INFO:root:Relevant article: Sa ja til bygge nærmere 400 boliger i Nesbygda: – Dypt bekymret
+INFO:root:Relevant article: Står igjen med 23 usolgte leiligheter: – Har vært stille i markedet
+INFO:root:Relevant articles: 2, Not relevant articles: 232
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: dt_front_page.py
+INFO:root:Processing front page: sorlandsavisen_front_page.py
+INFO:root:Filtered articles for sorlandsavisen_front_page.py: 32
+INFO:root:Sending 38 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Volvo sitt sportslige alibi
+INFO:root:Not relevant article: – Lufta har gått ut av ballongen
+INFO:root:Not relevant article: Stor produktbredde og best på service
+INFO:root:Not relevant article: Sommerferie i tretopphytte
+INFO:root:Not relevant article: Utsatt for voldsforsøk og trusler
+INFO:root:Not relevant article: Lodder ut Vespa og cruise fra konsertscenen
+INFO:root:Not relevant article: Siktede er en mann i 20-årene
+INFO:root:Not relevant article: Kommer med kraftig advarsel
+INFO:root:Not relevant article: Avdød person siktet for dobbeltdrap i Lindesnes
+INFO:root:Not relevant article: Drukningsulykke i Otra
+INFO:root:Relevant article: Volvo sitt sportslige alibi
+INFO:root:Relevant article: JAC E30X nå klar for prøvekjøring hos RSA Bil
+INFO:root:Relevant articles: 2, Not relevant articles: 36
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: sorlandsavisen_front_page.py
+INFO:root:Processing front page: hadelandMeninger_front_page.py
+WARNING:root:No data found for hadelandMeninger_front_page.py. Skipping this entry.
+INFO:root:Processing front page: aftenbladetMeninger_front_page.py
+INFO:root:Filtered articles for aftenbladetMeninger_front_page.py: 32
+INFO:root:Sending 50 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: For å sikre et sterkt demokrati i fremtiden trenger vi lærere
+INFO:root:Not relevant article: Jeg håper Høyre tar til vett og redder Madlaveien fra bussveien
+INFO:root:Not relevant article: En skole å regne med
+INFO:root:Not relevant article: ⁠–⁠ Kolumbus er alvorlig syk
+INFO:root:Not relevant article: Me lever stadig lenger. Men eitt dødstall går ikkje ned
+INFO:root:Not relevant article: I en tid der demokratiske verdier er under press, spiller folkehøgskolene en stadig viktigere rolle i samfunnet
+INFO:root:Not relevant article: Å sette mål som ikke er oppnåelige, og som alle vet ikke er det, er et politisk feil­grep
+INFO:root:Not relevant article: Fellesskap er mer enn fellesskolen
+INFO:root:Not relevant article: Denne serien er ei formidabel skildring av det komplekse med å oppdra barn
+INFO:root:Not relevant article: Til tross for Aftenbladets storslåtte ordbruk, er keiseren fortsatt naken
+INFO:root:Relevant article: Hipp hurra for grunn­rente­skatten!
+INFO:root:Relevant article: Myten om at satsingen på havvind vil gi dyrere strøm, blir ikke sann selv om Motvind gjentar den
+INFO:root:Relevant article: Et viktig tiltak, men på feil sted
+INFO:root:Relevant article: Det vi ser utspille seg i Trumps Amerika, er intet mindre enn et sivilisasjons­brudd
+INFO:root:Relevant article: Dyr havvind gir dyrere strøm
+INFO:root:Relevant article: Gigant-kraftverket i Suldal må finne seg i å bli nummer to
+INFO:root:Relevant articles: 6, Not relevant articles: 44
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 6 relevant articles to database. 201 - {"message":"6 records created/updated."}
+INFO:root:Completed processing for front page: aftenbladetMeninger_front_page.py
+INFO:root:Processing front page: venneslatidendeMeninger_front_page.py
+INFO:root:Filtered articles for venneslatidendeMeninger_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Kvinner har ikke god nok beskyt­telse mot vold og voldtekt
+INFO:root:Not relevant article: Ikke riv herreds­huset!
+INFO:root:Not relevant article: Fjellhall – et klokt valg for fremtiden
+INFO:root:Not relevant article: «Bevar Herredshuset og bevar de veldig få furuene som står igjen»
+INFO:root:Not relevant article: Dekket arbeids­klær til hjemme­syke­pleien – en selvfølge!
+INFO:root:Not relevant article: Bli med på vårens viktigste søndagstur!
+INFO:root:Not relevant article: Er du med på laget?
+INFO:root:Relevant article: «Blir nærmest et forsøk på å lure vindkraft inn bakveien»
+INFO:root:Not relevant article: Årganger som dette, er ikke båret fram av én enkeltperson
+INFO:root:Relevant article: Vi har ingen planer om å investere i vindmøller i Vennesla
+INFO:root:Not relevant article: Det har gått med mange timer med venting
+INFO:root:Not relevant article: I veiens 130 år lange historie, har det ikke skjedd skader som følge av steinsprang
+INFO:root:Relevant article: Det fører ikke til lavere strømpriser å la "Danmarkskablene utgå"
+INFO:root:Relevant article: Løs priskrisen – ikke ødelegg framtida!
+INFO:root:Relevant article: « Altså går strømeksporten fra Norge nå for fullt, til blant annet Tyskland, England og Danmark»
+INFO:root:Relevant article: Kutt strømkablene Skagerrak 1 og 2
+INFO:root:Relevant article: «Kablene til Danmark har stor betydning for økonomien i Vennesla»
+INFO:root:Relevant article: «Det er noe grunnleggende feil med industripolitikken i Norge!»
+INFO:root:Relevant article: «Kanskje blir kjernekraft 2000-tallets svar på 1900-tallets oljeeventyr»
+INFO:root:Relevant article: «Blir nærmest et forsøk på å lure vindkraft inn bakveien»
+INFO:root:Relevant articles: 19, Not relevant articles: 93
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 19 relevant articles to database. 201 - {"message":"19 records created/updated."}
+INFO:root:Completed processing for front page: venneslatidendeMeninger_front_page.py
+INFO:root:Processing front page: aftenbladetLokalt_front_page.py
+INFO:root:Filtered articles for aftenbladetLokalt_front_page.py: 32
+INFO:root:Sending 50 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: ⁠–⁠ Slik skal ikke frontruten se ut
+INFO:root:Not relevant article: Babymat fra Nestlé trekkes fra markedet
+INFO:root:Relevant article: Vil lage månevann fra Månafossen. Nå har han fått svar
+INFO:root:Not relevant article: Stenger Åna-Sira-veien i ett døgn
+INFO:root:Not relevant article: Tenåring til legevakten etter mc-velt
+INFO:root:Not relevant article: Legger ned barnehage
+INFO:root:Not relevant article: En fører tatt i ruskontroll på Tasta
+INFO:root:Relevant article: Bil gikk tom for strøm i rundkjøring - føreren stakk av
+INFO:root:Not relevant article: Brann hos Aker Solutions
+INFO:root:Not relevant article: Full priskrig før påske: ⁠–⁠ Vi går tomme lenge før tiden
+INFO:root:Not relevant article: Påskeværet: Lørdag kommer solen, men lykken blir kortvarig
+INFO:root:Not relevant article: Morgenbrifen
+INFO:root:Relevant article: La fram klimamelding på Rosenberg: ⁠–⁠ De vet hva omstilling er for noe
+INFO:root:Relevant article: Havnebad-kontrakten er tildelt: Bading fra 2027
+INFO:root:Relevant article: Sier ja til golf-lys i Sandnes: ⁠–⁠ Det første i Norge
+INFO:root:Relevant articles: 5, Not relevant articles: 45
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 5 relevant articles to database. 201 - {"message":"5 records created/updated."}
+INFO:root:Completed processing for front page: aftenbladetLokalt_front_page.py
+INFO:root:Processing front page: pd_front_page.py
+INFO:root:Filtered articles for pd_front_page.py: 32
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+INFO:root:Sending 50 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Megadusør gjorde susen – nå kan gutta juble
+INFO:root:Not relevant article: Farlig i sentrum? – Mulighet i alle kriker og kroker
+INFO:root:Not relevant article: PIT (30) vil være vill, vakker og vågal: Lover pappkran ved elva
+INFO:root:Not relevant article: Ordføreren er sykemeldt: – Ønsker han god bedring
+INFO:root:Not relevant article: Klar til å ta området ett skritt videre: – Starta egentlig for over 20 år siden
+INFO:root:Not relevant article: Kommunens første på vei opp - flere av dem solgt allerede
+INFO:root:Not relevant article: Har gledet seg siden nyttår: – Første i Grenland
+INFO:root:Not relevant article: Korte videoer
+INFO:root:Not relevant article: Demonstrasjon utenfor rådhuset
+INFO:root:Not relevant article: Åpning av Renta-bygget
+INFO:root:Relevant articles: 0, Not relevant articles: 50
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: pd_front_page.py
+INFO:root:Processing front page: e24EmneAb925c93Eea849688deeE9ec4bfcf4f6E24Kommentarer_front_page.py
+INFO:root:Filtered articles for e24EmneAb925c93Eea849688deeE9ec4bfcf4f6E24Kommentarer_front_page.py: 32
+INFO:root:Sending 68 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: Gigantene hamrer løs på hverandre
+INFO:root:Relevant article: Tiåring truer Trump
+INFO:root:Relevant article: Trump er børsenes herre
+INFO:root:Not relevant article: Mye tyder på at Trump har en plan
+INFO:root:Relevant article: På tide å rømme børsene?
+INFO:root:Relevant article: Rømmer til trygge havner
+INFO:root:Relevant article: Slik ser en politisk revolusjon ut
+INFO:root:Relevant article: Aksjene som elsker svak dollar
+INFO:root:Not relevant article: Verden vi kjenner er død
+INFO:root:Relevant article: Trumps ville regnestykker om toll
+INFO:root:Not relevant article: Nå er det alvor
+INFO:root:Relevant article: Trump-toll med eller uten moms?
+INFO:root:Relevant article: Det er bare å holde seg fast
+INFO:root:Not relevant article: Kommer aldri rentekuttet?
+INFO:root:Not relevant article: Mímir har et poeng, men løsningen ville gjort ting enda verre
+INFO:root:Not relevant article: Fem ting
+INFO:root:Not relevant article: Rentekuttene forsvinner
+INFO:root:Not relevant article: Valget som brått ble bratt
+INFO:root:Not relevant article: Smell eller ikke smell: Det er spørsmålet
+INFO:root:Not relevant article: Fem nye år
+INFO:root:Relevant articles: 33, Not relevant articles: 35
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 33 relevant articles to database. 201 - {"message":"33 records created/updated."}
+INFO:root:Completed processing for front page: e24EmneAb925c93Eea849688deeE9ec4bfcf4f6E24Kommentarer_front_page.py
+INFO:root:Processing front page: gat_front_page.py
+INFO:root:Filtered articles for gat_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: — Ikke én eneste grimstadbasert kunstner får muligheten til å delta
+INFO:root:Not relevant article: — Økonomi alene kan ikke være en gyldig grunn til å kutte tilbud
+INFO:root:Not relevant article: — Det er bare én hake
+INFO:root:Not relevant article: Klare meninger om barnetoget: – Vil være en skam
+INFO:root:Not relevant article: – Veien er rett og slett blitt livsfarlig
+INFO:root:Not relevant article: Foreslår at politikere og administrasjonen arbeider en dag gratis i dugnadens ånd
+INFO:root:Not relevant article: – Nei til ny lysløype!
+INFO:root:Not relevant article: – Ønsker en sunn forvaltning av sørlandskysten
+INFO:root:Not relevant article: – Er budsjettprosessen problemet?
+INFO:root:Not relevant article: – Uheldig og uklokt av det politiske flertallet å kutte bevilgningen
+INFO:root:Relevant articles: 0, Not relevant articles: 112
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: gat_front_page.py
+INFO:root:Processing front page: aftenbladetTagStavanger_front_page.py
+INFO:root:Filtered articles for aftenbladetTagStavanger_front_page.py: 32
+INFO:root:Sending 50 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Boligprisene stiger - åtte rogalandskommuner på topplista
+INFO:root:Not relevant article: God mat, super vin og herlig uteservering
+INFO:root:Relevant article: La fram klimamelding på Rosenberg: ⁠–⁠ De vet hva omstilling er for noe
+INFO:root:Relevant article: Equinor til Sandnes? Dette spektakulære prosjektet ble vraket
+INFO:root:Not relevant article: Dømt etter brann i Stavanger sentrum
+INFO:root:Not relevant article: Skal ha ranet til seg mobil med gassvåpen
+INFO:root:Not relevant article: Torgboder ble ingen knall­suksess likevel
+INFO:root:Not relevant article: ⁠–⁠ Selv sørlendinger koser seg i Stavanger nå
+INFO:root:Not relevant article: Fly på vei til Stavanger måtte nødlande
+INFO:root:Not relevant article: Vi har sjekket pris og når sola skinner på uteserveringene
+INFO:root:Not relevant article: Har kommet fra Napoli: ⁠–⁠ Alltid nervøs for løftet
+INFO:root:Not relevant article: Nektet å godta mobilbot - tapte i retten
+INFO:root:Relevant article: I fjor tapte rogalendingene mest på børsen. I år snudde trenden
+INFO:root:Relevant article: Nykommer kaster seg inn i bolig­markedet
+INFO:root:Relevant article: Ekstremvær skjer oftere og rammer hardere. Det har blitt en gullgruve for Stavanger-bedriften
+INFO:root:Relevant article: ⁠–⁠ Det er rift om både leiligheter og eneboliger
+INFO:root:Relevant articles: 6, Not relevant articles: 44
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 6 relevant articles to database. 201 - {"message":"6 records created/updated."}
+INFO:root:Completed processing for front page: aftenbladetTagStavanger_front_page.py
+INFO:root:Processing front page: hallingdolen_front_page.py
+WARNING:root:No data found for hallingdolen_front_page.py. Skipping this entry.
+INFO:root:Processing front page: fvnMening_front_page.py
+INFO:root:Filtered articles for fvnMening_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Hvordan tror dere at vi kan ta dette seriøst?
+INFO:root:Not relevant article: En salmehistoriens «one hit wonder»
+INFO:root:Not relevant article: Når bærekraft blir en bro mellom byer
+INFO:root:Not relevant article: Alkolås i biler 2
+INFO:root:Not relevant article: Drap og den omvendte Kardemommeloven
+INFO:root:Not relevant article: Kvinner må stille opp i små truser
+INFO:root:Not relevant article: Forsvarsevnen i Norge i dag
+INFO:root:Not relevant article: Vi er ikke lærere for feriens skyld
+INFO:root:Not relevant article: Eg blir deprimert når eg les om kvinner som vil føde utan hjelp av jordmor
+INFO:root:Not relevant article: Nå får hundre­tusenvis flere rabat­tert tannbe­hand­ling!
+INFO:root:Relevant article: Vindkraftens andre ansikt
+INFO:root:Relevant article: Ferde på ville veier igjen
+INFO:root:Relevant article: "Det er slutt­summen på kassa­lappen som teller"
+INFO:root:Relevant article: Grønne ord, brun handling
+INFO:root:Relevant articles: 4, Not relevant articles: 108
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 4 relevant articles to database. 201 - {"message":"4 records created/updated."}
+INFO:root:Completed processing for front page: fvnMening_front_page.py
+INFO:root:Processing front page: lpMeninger_front_page.py
+INFO:root:Filtered articles for lpMeninger_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Bekymringsfullt
+INFO:root:Not relevant article: Regler mot politikerforakt?
+INFO:root:Not relevant article: Økonomisk forvaltning
+INFO:root:Not relevant article: De reisendes hus
+INFO:root:Not relevant article: Vi må være forberedt
+INFO:root:Not relevant article: Arbeiderpartiet prioritere småbarnsfamiliene
+INFO:root:Not relevant article: Dyr skole
+INFO:root:Not relevant article: Europa i krig og partiet Rødts realitetsforståelse
+INFO:root:Not relevant article: Om hål i heia
+INFO:root:Not relevant article: Etiske retningslinjer for folkevalgte
+INFO:root:Relevant article: Ja til nordisk samarbeid, nei til en usikker stormaktsavhengighet
+INFO:root:Relevant article: Lokalisering av hovedrenseanlegg i Lillesand kommune
+INFO:root:Relevant article: Renseanlegg
+INFO:root:Relevant article: Venstre vil ha felles renseanlegg med Grimstad
+INFO:root:Relevant article: Krever billigere strøm for næringslivet
+INFO:root:Relevant article: Fallhøyden er stor
+INFO:root:Relevant article: Resirkulering
+INFO:root:Relevant article: Ja til nordisk samarbeid, nei til en usikker stormaktsavhengighet
+INFO:root:Relevant article: Renseanlegg
+INFO:root:Relevant article: Om vårvind
+INFO:root:Relevant articles: 11, Not relevant articles: 101
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 11 relevant articles to database. 201 - {"message":"11 records created/updated."}
+INFO:root:Completed processing for front page: lpMeninger_front_page.py
+INFO:root:Processing front page: aftenpostenMeningerDebatt_front_page.py
+INFO:root:Filtered articles for aftenpostenMeningerDebatt_front_page.py: 32
+INFO:root:Sending 100 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Skal jeg bare slutte å bruke ordet doula en stund?
+INFO:root:Not relevant article: Helseministerens «digitale avlastningsleger» kan virke som en god løsning, men det er utfordringer
+INFO:root:Not relevant article: Jeg synes det er smålig av Aftenposten å fremstille meg feil
+INFO:root:Not relevant article: At folk får seg hund, er ikke nytt. Det nye er hvor lite annet som får plass.
+INFO:root:Not relevant article: Det er dessverre mange som er like dømmende og nedlatende som Kaveh Rashidi
+INFO:root:Not relevant article: Harde ord og høy temperatur etter NRK-intervju
+INFO:root:Not relevant article: Større tydelighet fra lovgivers side om voldtekt vil være bra for både jenter og gutter
+INFO:root:Not relevant article: Forslaget er urettferdig. Og etter EØS-retten er det også ulovlig.
+INFO:root:Not relevant article: Dette er så nedlatende av Aftenpodden at det ikke kan stå uimotsagt
+INFO:root:Not relevant article: Etter flere år med utredninger er det på tide at Stortinget fatter et vedtak
+INFO:root:Relevant article: Norsk kyllingproduksjon trenger strengere krav – nå!
+INFO:root:Relevant article: Tendensiøs underdrivelse av sabotasjetrusselen til sjøs
+INFO:root:Relevant article: Trump har misforstått Grønlands betydning
+INFO:root:Relevant articles: 3, Not relevant articles: 97
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 3 relevant articles to database. 201 - {"message":"3 records created/updated."}
+INFO:root:Completed processing for front page: aftenpostenMeningerDebatt_front_page.py
+INFO:root:Processing front page: setesdolen_front_page.py
+WARNING:root:No data found for setesdolen_front_page.py. Skipping this entry.
+INFO:root:Processing front page: byavisadrammenForbruker_front_page.py
+INFO:root:Filtered articles for byavisadrammenForbruker_front_page.py: 32
+INFO:root:Sending 32 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Mobiler blir stjålet og ødelagt som aldri før
+INFO:root:Not relevant article: Skal du ha tilbake penger?
+INFO:root:Relevant article: Nå lanseres Prisradar
+INFO:root:Not relevant article: Si nei til gratis tannblekingspakker!
+INFO:root:Relevant article: Handlenett gir meir miljøvennleg mathandel
+INFO:root:Not relevant article: Sjampotest: Billigst er best for både deg og miljøet
+INFO:root:Not relevant article: Flystreik: Dette har du krav på
+INFO:root:Relevant article: Mange næringsdrivende tar for mye betalt
+INFO:root:Not relevant article: Solgt 78 millioner færre plastbæreposer
+INFO:root:Relevant article: Risiko ved å handle produkter utenfor EU
+INFO:root:Relevant article: Forbrukerorganisasjonene i EU vil temme Temu
+INFO:root:Not relevant article: 1 av 3 vil si opp treningsabonnementet
+INFO:root:Not relevant article: Hvorfor har vi fraværsgebyr?
+INFO:root:Not relevant article: Forbrukerne kan samlet sett spare milliarder på å bytte bank
+INFO:root:Not relevant article: Ser laderen din slik ut? - Kast den med en gang!
+INFO:root:Relevant article: Skal du ha tilbake penger?
+INFO:root:Relevant article: Nå lanseres Prisradar
+INFO:root:Relevant article: Handlenett gir meir miljøvennleg mathandel
+INFO:root:Relevant article: Mange næringsdrivende tar for mye betalt
+INFO:root:Relevant article: Solgt 78 millioner færre plastbæreposer
+INFO:root:Relevant articles: 13, Not relevant articles: 19
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 13 relevant articles to database. 201 - {"message":"13 records created/updated."}
+INFO:root:Completed processing for front page: byavisadrammenForbruker_front_page.py
+INFO:root:Processing front page: arendalstidendeMeninger_front_page.py
+INFO:root:Filtered articles for arendalstidendeMeninger_front_page.py: 32
+INFO:root:Sending 48 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Ukrainerne går i NAV-fellen
+INFO:root:Not relevant article: Nyhetene, og lest om i avisen
+INFO:root:Not relevant article: Krig og fred og sånn
+INFO:root:Not relevant article: Er vi forberedt på krisene vi ser komme?
+INFO:root:Not relevant article: I dag har kampene i Ukraina foregått i over 100 dager
+INFO:root:Not relevant article: Lisen får ikke sove – En dagbok time for time i natten
+INFO:root:Not relevant article: Asias nye allianse
+INFO:root:Not relevant article: Et tryggere Norge med bedre beredskap
+INFO:root:Not relevant article: «Null stress» er å ta hardt i, men hyggelig
+INFO:root:Not relevant article: -Fra mamma til drage på 2 minutter
+INFO:root:Relevant article: Oppkjøpet av Oslo Børs
+INFO:root:Relevant article: Landbaserte vindmøller er ikke ønsket i Agder
+INFO:root:Relevant article: Oppkjøpet av Oslo Børs
+INFO:root:Relevant article: Landbaserte vindmøller er ikke ønsket i Agder
+INFO:root:Relevant articles: 4, Not relevant articles: 44
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 4 relevant articles to database. 201 - {"message":"4 records created/updated."}
+INFO:root:Completed processing for front page: arendalstidendeMeninger_front_page.py
+INFO:root:Processing front page: venneslatidende_front_page.py
+INFO:root:Filtered articles for venneslatidende_front_page.py: 32
+INFO:root:Sending 12 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Blir leder for 180 ansatte: – En stor oppgave
+INFO:root:Not relevant article: Tok seg inn i nedlagt skole: – Samtlige var mindre­årige
+INFO:root:Not relevant article: Så seg nødt til å melde oppbud: – Veldig trist og leit
+INFO:root:Not relevant article: – Jeg begynte allerede for flere måneder siden
+INFO:root:Not relevant article: – Måtte jo bare komme meg i bilen
+INFO:root:Not relevant article: I Vennesla har denne leiligheten steget 540.000 kroner i verdi på tre år
+INFO:root:Not relevant article: Blir leder for 180 ansatte: – En stor oppgave
+INFO:root:Not relevant article: Tok seg inn i nedlagt skole: – Samtlige var mindre­årige
+INFO:root:Not relevant article: Så seg nødt til å melde oppbud: – Veldig trist og leit
+INFO:root:Not relevant article: – Jeg begynte allerede for flere måneder siden
+INFO:root:Relevant articles: 0, Not relevant articles: 12
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: venneslatidende_front_page.py
+INFO:root:Processing front page: nrkNorge_front_page.py
+INFO:root:Filtered articles for nrkNorge_front_page.py: 32
+INFO:root:Sending 84 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Ny dyrevelferdsmelding vedtatt: – En tapt sjanse
+INFO:root:Not relevant article: Høyesterett tar opp ankesak mot Fosen-aksjonistene
+INFO:root:Not relevant article: Smugla over 140 kg narkotika inn i landet – to må i fengsel
+INFO:root:Not relevant article: Åtvarar mot skigåing i jernbanesporet
+INFO:root:Not relevant article: Mistet jobben onsdag, her henter han klærne sine fra brannruinene: – Jeg har 15 kroner på kontoen
+INFO:root:Not relevant article: Valdshending i Hustadvika: Jobbar framleis med å finne motivet
+INFO:root:Not relevant article: Tenkt å reise med tog i påsken? Les dette
+INFO:root:Not relevant article: Snakk om risikoen
+INFO:root:Not relevant article: Stoltenberg på toppmøte: – EU ser verdien av at vi kjem på innsida
+INFO:root:Not relevant article: Var svært nær fullstendig brannkatastrofe i Drammen
+INFO:root:Relevant article: RiG tok mer betalt for restavfall – fikk ned søppelmengden – NRK Vestfold og Telemark – Lokale nyheter, TV og radio
+INFO:root:Relevant article: Staten sponser landstraumanlegg i Flåm for grønare cruiseskip – NRK Vestland
+INFO:root:Relevant articles: 2, Not relevant articles: 82
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: nrkNorge_front_page.py
+INFO:root:Processing front page: e24NorskOekonomi_front_page.py
+INFO:root:Filtered articles for e24NorskOekonomi_front_page.py: 32
+INFO:root:Sending 68 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Prisveksten dempet seg til 2,6 prosent: – Endrer ikke planen om rentekutt
+INFO:root:Not relevant article: Støre avviser krisepakker etter markedsuro
+INFO:root:Not relevant article: Mener markedet priser inn dobbelt så mange rentekutt: – Overreaksjon
+INFO:root:Not relevant article: Hansa Borg legger ned bryggeri i Sarpsborg
+INFO:root:Not relevant article: Bache advarer om markedsuro: – Betydelig usikkerhet
+INFO:root:Not relevant article: Stoltenberg om handelskrig: – Vi går inn i en storm
+INFO:root:Not relevant article: Lønnsgeneral og gullsmed: – Jeg vil bli LO-leder
+INFO:root:Not relevant article: Avviser knekk i norsk økonomi: – Ikke snakk om
+INFO:root:Not relevant article: Advarer mot mottiltak: – Vi bør ikke øke tollen
+INFO:root:Not relevant article: Full forvirring om tollsats: Norge nedjustert til 15 prosent
+INFO:root:Relevant article: Derfor fikk Norge 16 prosent gjengjeldelsestoll
+INFO:root:Relevant article: Stoltenberg: – Det mest alvorlige tilbakeslaget vi har sett for en åpen fri verdenshandel siden mellomkrigstiden
+INFO:root:Relevant article: Finansminister Jens Stoltenberg: – Dette vil ramme Norge og norske bedrifter
+INFO:root:Relevant article: Prisveksten dempet seg til 2,6 prosent: – Endrer ikke planen om rentekutt
+INFO:root:Relevant article: Støre avviser krisepakker etter markedsuro
+INFO:root:Relevant article: Stoltenberg om handelskrig: – Vi går inn i en storm
+INFO:root:Relevant article: Advarer mot mottiltak: – Vi bør ikke øke tollen
+INFO:root:Relevant article: Derfor fikk Norge 16 prosent gjengjeldelsestoll
+INFO:root:Relevant article: Næringsministeren: Toll mot Norge er på 16 prosent
+INFO:root:Relevant article: Stoltenberg: – Det mest alvorlige tilbakeslaget vi har sett for en åpen fri verdenshandel siden mellomkrigstiden
+INFO:root:Relevant articles: 14, Not relevant articles: 54
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 14 relevant articles to database. 201 - {"message":"14 records created/updated."}
+INFO:root:Completed processing for front page: e24NorskOekonomi_front_page.py
+INFO:root:Processing front page: gatMeninger_front_page.py
+INFO:root:Filtered articles for gatMeninger_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: — Ikke én eneste grimstadbasert kunstner får muligheten til å delta
+INFO:root:Not relevant article: — Økonomi alene kan ikke være en gyldig grunn til å kutte tilbud
+INFO:root:Not relevant article: — Det er bare én hake
+INFO:root:Not relevant article: Klare meninger om barnetoget: – Vil være en skam
+INFO:root:Not relevant article: – Veien er rett og slett blitt livsfarlig
+INFO:root:Not relevant article: Foreslår at politikere og administrasjonen arbeider en dag gratis i dugnadens ånd
+INFO:root:Not relevant article: – Nei til ny lysløype!
+INFO:root:Not relevant article: – Ønsker en sunn forvaltning av sørlandskysten
+INFO:root:Not relevant article: – Er budsjettprosessen problemet?
+INFO:root:Not relevant article: – Uheldig og uklokt av det politiske flertallet å kutte bevilgningen
+INFO:root:Relevant article: – Vi må ha lavere strøm­priser i hele landet
+INFO:root:Relevant article: – Skap utvikling og liv på Torskeholmen!
+INFO:root:Relevant article: Derfor vil de ha vindkraft på Omre
+INFO:root:Relevant article: Inviter Elon Musk! Eller har han allerede vært her?
+INFO:root:Relevant article: – Ikke bygg vindkraft i intakt natur ved Omre
+INFO:root:Relevant article: – Bygg jordvarmeanlegg på Omre
+INFO:root:Relevant article: UiA-professor vil teste vindkraft på Omre
+INFO:root:Relevant article: – Vi må ha lavere strøm­priser i hele landet
+INFO:root:Relevant article: – Skap utvikling og liv på Torskeholmen!
+INFO:root:Relevant article: Derfor vil de ha vindkraft på Omre
+INFO:root:Relevant articles: 14, Not relevant articles: 98
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 14 relevant articles to database. 201 - {"message":"14 records created/updated."}
+INFO:root:Completed processing for front page: gatMeninger_front_page.py
+INFO:root:Processing front page: energiogklimaNyhet_front_page.py
+INFO:root:Filtered articles for energiogklimaNyhet_front_page.py: 32
+INFO:root:Sending 36 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: Klimakamp til havs – utan USA
+INFO:root:Relevant article: Norske kvoteutslipp falt 4 prosent
+INFO:root:Relevant article: Her kommer omkampene om EUs klimapolitikk
+INFO:root:Relevant article: Trump-tollen gir mer usikkerhet – også for alt som er grønt
+INFO:root:Relevant article: Foreslår minst 70 prosent utslippskutt i 2035
+INFO:root:Relevant article: Merz med nøkkel til EUs nye klimamål
+INFO:root:Relevant article: Norge starter snart EØS-forhandlinger om omstridt skogsregelverk
+INFO:root:Relevant article: Norge med klar beskjed til EU: Ikke rør «sluttdatoen» for diesel- og bensinbiler
+INFO:root:Relevant article: Flyr fra klimaansvaret
+INFO:root:Relevant article: EU-landene etterlyser friske penger til å kutte utslipp i industrien
+INFO:root:Relevant articles: 36, Not relevant articles: 0
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 36 relevant articles to database. 201 - {"message":"36 records created/updated."}
+INFO:root:Completed processing for front page: energiogklimaNyhet_front_page.py
+INFO:root:Processing front page: fvn_front_page.py
+INFO:root:Filtered articles for fvn_front_page.py: 32
+INFO:root:Sending 14 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: ATV-fører til sykehus etter ulykke
+INFO:root:Not relevant article: – Å stå i fare for å miste jobben er veldig kjipt
+INFO:root:Not relevant article: – Vi var hverandres nærmeste venner, og snakket sammen hver dag
+INFO:root:Not relevant article: Tre 16-åringer dømt for ran og vold
+INFO:root:Not relevant article: Har gått i arv i familien i 100 år. Nå selger de hele øya midt i fjorden.
+INFO:root:Not relevant article: Politiet: Ingen kontakt i forkant
+INFO:root:Not relevant article: Jente skadet i ulykke
+INFO:root:Not relevant article: ATV-fører til sykehus etter ulykke
+INFO:root:Not relevant article: Legger ned strømselskap i Kristiansand
+INFO:root:Not relevant article: Dobbeltdrapet som rystet bygda
+INFO:root:Relevant articles: 0, Not relevant articles: 14
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: fvn_front_page.py
+INFO:root:Processing front page: energiognaturTagVindkraft_front_page.py
+INFO:root:Filtered articles for energiognaturTagVindkraft_front_page.py: 32
+INFO:root:Sending 32 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Verdifull kraft må ikke sløses bort på hydrogen
+INFO:root:Not relevant article: Omfattende ulovlig nedbygging av natur
+INFO:root:Not relevant article: Enøk-tiltak kan gjøre vindkraft overflødig
+INFO:root:Not relevant article: Økonomibløffen
+INFO:root:Not relevant article: ZEROs løgner
+INFO:root:Not relevant article: Folkesviket
+INFO:root:Relevant article: Omfattende ulovlig nedbygging av natur
+INFO:root:Relevant article: «Arvesølvet» i spill
+INFO:root:Relevant article: Naturens helsebringende verdi – og sorgen over vindindustriens ødeleggelser
+INFO:root:Relevant article: Juridisk gråsone på vindkraftlobbyens arena
+INFO:root:Relevant article: Vindkraft og konsekvensar for natur og friluftsliv
+INFO:root:Relevant article: Folkeopprøret
+INFO:root:Relevant article: Vind- og vannkraft: Lønnsomhet og beskatning
+INFO:root:Relevant article: Klimapolitikk, kraftmarkedet og fordelingseffekter
+INFO:root:Relevant article: Beskatning og verdiskaping: Tapere og vinnere i kraftsektoren
+INFO:root:Relevant article: Vindkraften skaper få arbeidsplasser
+INFO:root:Not relevant article: Naturens helsebringende verdi – og sorgen over vindindustriens ødeleggelser
+INFO:root:Relevant articles: 25, Not relevant articles: 7
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 25 relevant articles to database. 201 - {"message":"25 records created/updated."}
+INFO:root:Completed processing for front page: energiognaturTagVindkraft_front_page.py
+INFO:root:Processing front page: vgTagAmerikanskPolitikk_front_page.py
+INFO:root:Filtered articles for vgTagAmerikanskPolitikk_front_page.py: 32
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+{"title": "Meninger: Les avisen, bli dummere!", "published_date": null, "content": "forfatter, satiriker og avis-spaltist", "keywords": ["TikTok", "Aftenposten", "VG", "Gwyneth Paltrow"], "image_link": null, "author": null, "source_url": "https://www.vg.no", "url": "https://www.vg.no/nyheter/meninger/i/o3Ee2m/les-avisen-bli-dummere", "description": "Verden hadde blitt ganske mye bedre om både journalister og vanlige folk hadde giddet å tråkle seg gjennom en tynn liten bok om vitenskapsteori.", "category": "Nyheter", "paywall": false}
+INFO:root:Sending 20 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Mike Huckabee godkjent som USAs nye Israel-ambassadør
+INFO:root:Not relevant article: Det hvite hus anker kjennelse om opphevelse av restriksjoner mot nyhetsbyrået AP
+INFO:root:Not relevant article: Setter ned straffetoll for 75 land: –⁠ Med umiddelbar virkning
+INFO:root:Not relevant article: Trump-tap i retten – må slippe inn nyhetsbyrå
+INFO:root:Not relevant article: Trump signerer presidentordre for å øke kullproduksjon
+INFO:root:Not relevant article: Canadas toll på amerikanske biler innføres onsdag
+INFO:root:Not relevant article: Kilder til NBC: Pentagon vurderer å trekke ut 10.000 amerikanske soldater av Europa
+INFO:root:Not relevant article: USAs forsvarsminister på plass i Panama - skal «ta tilbake kanalen»
+INFO:root:Not relevant article: 23 delstater saksøker USAs regjering etter kutt i helsemilliarder
+INFO:root:Not relevant article: Rammes av handelskrig: Derfor støtter de fortsatt Trump
+INFO:root:Relevant article: Trump signerer presidentordre for å øke kullproduksjon
+INFO:root:Relevant articles: 1, Not relevant articles: 19
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 1 relevant articles to database. 201 - {"message":"1 records created/updated."}
+INFO:root:Completed processing for front page: vgTagAmerikanskPolitikk_front_page.py
+INFO:root:Processing front page: nrkKultur_front_page.py
+INFO:root:Filtered articles for nrkKultur_front_page.py: 32
+INFO:root:Sending 56 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: «Har aldri vært lenger unna tømmerhogger-folken»
+INFO:root:Not relevant article: Åtte gode krim­bøker til påskeferien
+INFO:root:Not relevant article: «Det er bare å forberede seg på å bli emosjonelt ødelagt»
+INFO:root:Not relevant article: Stjernekamp-artistene velger låter selv: – Jeg dediserer den til kjæresten min
+INFO:root:Not relevant article: Kjegle-dödaren
+INFO:root:Not relevant article: Musikk av bein og blod
+INFO:root:Not relevant article: Verdensmestre i kultur – på rekordtid
+INFO:root:Not relevant article: «Et oppgjør med Spotify, autotune og pandemi»
+INFO:root:Not relevant article: «Debutant å sjå opp for»
+INFO:root:Not relevant article: «Skaper umiddelbar sympati»
+INFO:root:Relevant articles: 0, Not relevant articles: 56
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: nrkKultur_front_page.py
+INFO:root:Processing front page: tv2Politikk_front_page.py
+INFO:root:Filtered articles for tv2Politikk_front_page.py: 32
+INFO:root:Sending 56 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Vil ha egen straff for narkotika «til egen bruk»
+INFO:root:Not relevant article: TV 2 avslørte over 1000 dødsfall – nå kommer ny ordning
+INFO:root:Not relevant article: Vil ha overgriper-liste: – Forebyggende
+INFO:root:Not relevant article: To partier snur – flertall for elektrifisering av Melkøya
+INFO:root:Not relevant article: Stoltenberg holder fondsformue hemmelig
+INFO:root:Not relevant article: Rekordlange fosterhjemskøer: – Går på liv og helse løs
+INFO:root:Not relevant article: Frykter prishopp på kakefavoritt
+INFO:root:Not relevant article: Ap-topp med løsvipper og «kneskjelv»
+INFO:root:Not relevant article: Gro og Jens om Støres comeback: – Har aldri mistet troen på Jonas
+INFO:root:Not relevant article: Smask! Jubel-Jonas klinte til med Marit: – Godt hver gang
+INFO:root:Relevant article: To partier snur – flertall for elektrifisering av Melkøya
+INFO:root:Relevant articles: 1, Not relevant articles: 55
+ERROR:root:Error in article prediction/insertion: 1 validation error for Content
+author
+  Input should be a valid string [type=string_type, input_value=['NTB'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+ERROR:root:Entity action failed - ValueError encountered: 1 validation error for Content
+author
+  Input should be a valid string [type=string_type, input_value=['NTB'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+INFO:root:Completed processing for front page: tv2Politikk_front_page.py
+INFO:root:Processing front page: vgNyheterMeninger_front_page.py
+INFO:root:Filtered articles for vgNyheterMeninger_front_page.py: 32
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+INFO:root:Sending 19 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Not relevant article:
+INFO:root:Relevant articles: 0, Not relevant articles: 19
+INFO:root:No relevant articles found to add to database.
+INFO:root:Completed processing for front page: vgNyheterMeninger_front_page.py
+INFO:root:Processing front page: nrkDebatten_front_page.py
+INFO:root:Filtered articles for nrkDebatten_front_page.py: 32
+INFO:root:Sending 26 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: USA eller Kina - Hvem heier du på?
+INFO:root:Not relevant article: Tips oss
+INFO:root:Not relevant article: Er Norges toll snillere enn Trumps toll?
+INFO:root:Not relevant article: Hva synes du om Trumps tollplan?
+INFO:root:Not relevant article: Hva synes du om mediedekningen av Ingebrigtsen-saken?
+INFO:root:Not relevant article: Ingrid (21): – Gjør at man vurderer plastisk kirurgi
+INFO:root:Not relevant article: Er du fornøyd med utseendet ditt?
+INFO:root:Not relevant article: Tips oss: Hva gjør du for å føle deg bedre?
+INFO:root:Not relevant article: Er dyrtiden over for deg?
+INFO:root:Not relevant article: Bør Oljefondet trekke seg ut av Israel?
+INFO:root:Not relevant article: – Hvordan skal jeg holdes i live?
+INFO:root:Relevant article: USA eller Kina - Hvem heier du på? – NRK Norge – Oversikt over nyheter fra ulike deler av landet
+INFO:root:Relevant articles: 2, Not relevant articles: 24
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: nrkDebatten_front_page.py
+INFO:root:Processing front page: frolendingenPolitikk29.9_front_page.py
+INFO:root:Filtered articles for frolendingenPolitikk29.9_front_page.py: 32
+INFO:root:Sending 100 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Innrømmer dårlig håndtering av badstue-søknad
+INFO:root:Not relevant article: Se opptak fra kommunestyret 10. april
+INFO:root:Not relevant article: Frykter at gårdsbarnehagen kan bli lagt ned
+INFO:root:Not relevant article: Fortsatt usikkert om vei­finansiering
+INFO:root:Not relevant article: Foreslår drastiske kutt på 10 millioner
+INFO:root:Not relevant article: Steile fronter under behandling av skjenkebevilling
+INFO:root:Not relevant article: Ønsker at overgangen blir merket og skiltet
+INFO:root:Not relevant article: – Jeg har erfaring med å frakte lik på høykant
+INFO:root:Not relevant article: Dette mener hun vil ordne bemannings—utfordringene
+INFO:root:Not relevant article: 192 kommuner i underskudd i 2024
+INFO:root:Relevant article: Fortsatt usikkert om vei­finansiering
+INFO:root:Relevant article: Håpet å slippe veiregulering: Fikk tydelig beskjed fra departementet
+INFO:root:Relevant article: Har inngått avtale, kan spare 1,4 millioner
+INFO:root:Relevant article: Vil ikke åpne for investering i vindkraft
+INFO:root:Relevant article: Innsendt: Ny vei til Bøylestad - ikke en god investering
+INFO:root:Relevant article: Næringsutvikling på Bøylestad: Avhengig av fylket for å komme videre
+INFO:root:Relevant articles: 6, Not relevant articles: 94
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 6 relevant articles to database. 201 - {"message":"6 records created/updated."}
+INFO:root:Completed processing for front page: frolendingenPolitikk29.9_front_page.py
+INFO:root:Processing front page: frolendingenLeserinnlegg29.4_front_page.py
+INFO:root:Filtered articles for frolendingenLeserinnlegg29.4_front_page.py: 32
+INFO:root:Sending 100 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Diskrimineres i bolig­markedet
+INFO:root:Not relevant article: Opptil 40 elever i Froland manglet pedagog hver dag
+INFO:root:Not relevant article: Jonas og Jens - Et eventyr som ble et mareritt?
+INFO:root:Not relevant article: Kommunekassa skranter - men folk stopper ikke med å bli eldre
+INFO:root:Not relevant article: – Stolte av gymnastene fra Froland
+INFO:root:Not relevant article: Blakstad Hotel og landhandelen på Kristensplass
+INFO:root:Not relevant article: Svar til Omdalsmoen om Frolands vei ut av ROBEK
+INFO:root:Not relevant article: Godt oppmøte for HLF årsmøte
+INFO:root:Not relevant article: Vi trenger din hjelp!
+INFO:root:Not relevant article: 360 barn venter på fosterhjem
+INFO:root:Relevant article: Innsendt: Tid for velvilje til hvem?
+INFO:root:Relevant article: Innsendt: Tilsvar til innlegget "Tid for velvilje på Bøylestad"
+INFO:root:Relevant article: Innsendt: Tid for velvilje på Bøylestad
+INFO:root:Relevant article: Innsendt: Gledelig om Bøylestad Energipark
+INFO:root:Relevant article: Innsendt: Stopp planene om hogst ved Bøylestad Energipark!
+INFO:root:Relevant article: Innsendt: Ny vei til Bøylestad - ikke en god investering
+INFO:root:Relevant article: Innsendt: Kjernekraft – en mulighet for fremtiden i Agder
+INFO:root:Relevant articles: 7, Not relevant articles: 93
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 7 relevant articles to database. 201 - {"message":"7 records created/updated."}
+INFO:root:Completed processing for front page: frolendingenLeserinnlegg29.4_front_page.py
+INFO:root:Processing front page: naturvernforbundetCategoryNyheterPaged5_front_page.py
+INFO:root:Filtered articles for naturvernforbundetCategoryNyheterPaged5_front_page.py: 32
+INFO:root:Sending 60 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: Står samlet mot gruvedrift i dyphavet
+INFO:root:Not relevant article: Sjokkerende
+nedbygging av natur
+INFO:root:Relevant article: Skrinlegger kraftverk på Vinstra
+INFO:root:Not relevant article: Vellykket ulvetreff
+INFO:root:Not relevant article: Ønsker tidenes skogvern-dugnad
+INFO:root:Not relevant article: Uansvarlige ulvekvoter
+INFO:root:Relevant article: Mange seire for
+natur og klima
+INFO:root:Relevant article: – Storsinnet av samene på Sør-Fosen
+INFO:root:Not relevant article: Krever endringer i vannforskriften
+INFO:root:Relevant article: Nytt fra COP28: Fange og lagre – eller kutte og omstille?
+INFO:root:Not relevant article: Full seier over skogselskap
+INFO:root:Not relevant article: – Helt vanvittig å åpne havbunnen for gruvedrift!
+INFO:root:Not relevant article: Norge trenger flere rovdyr
+INFO:root:Relevant article: Klimatoppmøtet COP28
+INFO:root:Relevant article: Må sjekke konsekvensene før høyspent-utbygging
+INFO:root:Not relevant article: Nyttig info for klesbyttearrangører
+INFO:root:Not relevant article: Slår alarm for skogen
+INFO:root:Relevant article: Uakseptable kraftplaner for Finnmark
+INFO:root:Relevant article: Anmelder soyaoljeutslipp
+INFO:root:Relevant article: Ny rapport vil gi stryk til regjeringen
+INFO:root:Relevant articles: 29, Not relevant articles: 31
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 29 relevant articles to database. 201 - {"message":"29 records created/updated."}
+INFO:root:Completed processing for front page: naturvernforbundetCategoryNyheterPaged5_front_page.py
+INFO:root:Processing front page: aftenpostenMeningerKommentar_front_page.py
+INFO:root:Filtered articles for aftenpostenMeningerKommentar_front_page.py: 32
+INFO:root:Sending 100 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: «Fakta legges til side for billige politiske poeng.» Hvem kunne hun sikte til, tro?
+INFO:root:Not relevant article: Han har fått et nytt kallenavn
+INFO:root:Not relevant article: Trump er på vei utfor stupet. Ingen ser ut til å kunne stanse ham.
+INFO:root:Relevant article: En av de beste utenrikspolitiske analysene kom i et dataspill
+INFO:root:Not relevant article: Trump skaper trøbbel for Listhaug
+INFO:root:Not relevant article: Foreldre må aldri falle for å bruke tvang i barneoppdragelsen. Det kan gå veldig galt.
+INFO:root:Not relevant article: Mye tyder på at Trump har en plan
+INFO:root:Not relevant article: Dette rammer midt i den norske modellen
+INFO:root:Not relevant article: Dropp fruktpureene
+INFO:root:Not relevant article: Denne 33 år gamle signaturen kan berge Norge fra tolltrøbbel
+INFO:root:Not relevant article: Mannen bak Trumps tollkrig med klar melding: Bare full underkastelse er nok
+INFO:root:Relevant article: Trump mener det han sier og sier hva han mener
+INFO:root:Relevant article: Ikke er han invitert. Heller ikke ønsket. Ingen vil møte ham. Hvorfor kommer likevel J.D. Vance?
+INFO:root:Relevant article: En av de beste utenrikspolitiske analysene kom i et dataspill
+INFO:root:Relevant article: Trump mener det han sier og sier hva han mener
+INFO:root:Relevant article: Ikke er han invitert. Heller ikke ønsket. Ingen vil møte ham. Hvorfor kommer likevel J.D. Vance?
+INFO:root:Relevant articles: 6, Not relevant articles: 94
+ERROR:root:Error in article prediction/insertion: 'NoneType' object has no attribute 'strip'
+ERROR:root:Entity action failed - Exception occurred: 'NoneType' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 44, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 116, in perform
+    source=Source(
+           ^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/.venv/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/packages/modelling/src/modelling/models.py", line 103, in validate_url
+    return format_domain(v)
+           ^^^^^^^^^^^^^^^^
+  File "/workspace/packages/modelling/src/modelling/models.py", line 15, in format_domain
+    url = urlparse(url).hostname.strip('www.')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+INFO:root:Completed processing for front page: aftenpostenMeningerKommentar_front_page.py
+INFO:root:Processing front page: dagbladetMeninger_front_page.py
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+Error processing an article: 'NoneType' object has no attribute 'get_text'
+WARNING:root:No data found for dagbladetMeninger_front_page.py. Skipping this entry.
+INFO:root:Processing front page: e24EnergiOgKlima_front_page.py
+INFO:root:Filtered articles for e24EnergiOgKlima_front_page.py: 32
+INFO:root:Sending 68 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: IEA-rapport om AI: Venter over doblet kraftforbruk i datasentre
+INFO:root:Not relevant article: Trump signerer presidentordre for å øke kullproduksjon
+INFO:root:Relevant article: Ikke flertall for å skrote elektrifisering av Melkøya likevel
+INFO:root:Relevant article: Hydrogen og batterier droppes: NVE tror kraftunderskuddet uteblir
+INFO:root:Not relevant article: Kinas teknologiutvikling raser videre
+INFO:root:Relevant article: – Komplett uforståelig å stanse Melkøya
+INFO:root:Relevant article: Går for 70–75 prosent klimakutt innen 2035
+INFO:root:Relevant article: Disse bedriftene vil ha mest strøm
+INFO:root:Relevant article: Vil droppe grønt i Equinor: – Frisk spissformulering
+INFO:root:Relevant article: Norsk klimastiftelse: – Dropp alt som er grønt i Equinor
+INFO:root:Relevant article: Blar opp nye 7,5 mrd. til CO₂-lager
+INFO:root:Not relevant article: Datasenter-sjef om «kattevideo»-utspill: – Jeg blir lei meg
+INFO:root:Relevant article: Første på ti år: – Helt klart kraft Norge trenger
+INFO:root:Not relevant article: Skal jussen redde klimaet?
+INFO:root:Not relevant article: Reagerer på Nammo-svar: – Handlingslammelse
+INFO:root:Not relevant article: Vindkraftutbygger: – Åpenbart gjort en feil
+INFO:root:Not relevant article: Høyre skrotet den – Frp vil ha den tilbake
+INFO:root:Not relevant article: Northvolts fall: – Den største konkursen i svensk historie
+INFO:root:Not relevant article: Hysj, du jobber med bærekraft
+INFO:root:Not relevant article: Slik blir «Norgespris»
+INFO:root:Relevant articles: 56, Not relevant articles: 12
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 56 relevant articles to database. 201 - {"message":"56 records created/updated."}
+INFO:root:Completed processing for front page: e24EnergiOgKlima_front_page.py
+INFO:root:Processing front page: lpNyheter_front_page.py
+INFO:root:Filtered articles for lpNyheter_front_page.py: 32
+INFO:root:Sending 112 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Nærbutikken åpnet igjen
+INFO:root:Not relevant article: Investerte over 2,2 milliarder i fjor: – Solid andreår for Å Energi
+INFO:root:Not relevant article: Felles VA-etat med Grimstad?
+INFO:root:Not relevant article: Også Grimstad sa ja til samarbeid
+INFO:root:Not relevant article: Skoledag i landlige omgivelser
+INFO:root:Not relevant article: I dag kan dette koste oss 50 millioner kroner
+INFO:root:Not relevant article: – Vi kommer på besøk!
+INFO:root:Not relevant article: Vil gi ungdommen talerett
+INFO:root:Not relevant article: Vil ikke bruke 1,8 millioner på uthus
+INFO:root:Not relevant article: – Oppsiktsvekkende avslag
+INFO:root:Relevant article: Investerte over 2,2 milliarder i fjor: – Solid andreår for Å Energi
+INFO:root:Relevant article: Samarbeid mellom slakteri og bryggeri
+INFO:root:Relevant articles: 2, Not relevant articles: 110
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: lpNyheter_front_page.py
+INFO:root:Processing front page: vgTagSamfunn_front_page.py
+WARNING:root:No data found for vgTagSamfunn_front_page.py. Skipping this entry.
+INFO:root:Processing front page: byavisadrammen_front_page.py
+INFO:root:Filtered articles for byavisadrammen_front_page.py: 32
+INFO:root:Sending 42 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Landets beste førere til KNA Drammens NM i autoslalåm
+INFO:root:Not relevant article: -Dette er tabben folk gjør, som ender med at vi må rykke ut
+INFO:root:Not relevant article: La ungdommen sitte i førersetet!
+INFO:root:Not relevant article: Endelig ringer klokkene i Skoger gamle kirke igjen
+INFO:root:Not relevant article: Nordby gård barnehage får en bit av friluftsmillionen
+INFO:root:Not relevant article: Sommerlig kunstutstilling i Siloen
+INFO:root:Not relevant article: Det blir kø over elva
+INFO:root:Not relevant article: Kritisk boligmangel for studentene
+INFO:root:Not relevant article: NM i sjakk markerte 100-års jubileet til Buskerud Sjakkrets
+INFO:root:Not relevant article: Fornyelse av Fasader: Økt verdi og bærekraft for bygg i Drammen
+INFO:root:Relevant article: Få et mer Effektiv Energibruk og Godt inneklima med Varmepumpe
+INFO:root:Relevant article: 20.000 inngrep hindrer fisken fra å vandre opp i elvene
+INFO:root:Relevant article: Få et mer Effektiv Energibruk og Godt inneklima med Varmepumpe
+INFO:root:Relevant article: Skal du ha tilbake penger?
+INFO:root:Relevant article: 20.000 inngrep hindrer fisken fra å vandre opp i elvene
+INFO:root:Relevant articles: 5, Not relevant articles: 37
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 5 relevant articles to database. 201 - {"message":"5 records created/updated."}
+INFO:root:Completed processing for front page: byavisadrammen_front_page.py
+INFO:root:Processing front page: nrkNyheterFornybarEnergi1.14530755_front_page.py
+INFO:root:Filtered articles for nrkNyheterFornybarEnergi1.14530755_front_page.py: 32
+INFO:root:Sending 10 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: Planar om nytt vindkraftverk i Bremanger
+INFO:root:Relevant article: Ikkje fleirtal for å stanse elektrifiseringa av Melkøya
+INFO:root:Relevant article: Solkraftrekord i 2024 – auka med 29 prosent
+INFO:root:Relevant article: NVE: Større kraftoverskot enn venta dei næraste åra
+INFO:root:Relevant article: NVE ber Statnett sjå på ny trasé
+INFO:root:Relevant article: Planar om nytt vindkraftverk i Bremanger – NRK Vestland
+INFO:root:Relevant article: Ikkje fleirtal for å stanse elektrifiseringa av Melkøya – NRK Vestland
+INFO:root:Relevant article: Solkraftrekord i 2024 – auka med 29 prosent – NRK Vestland
+INFO:root:Relevant article: NVE: Større kraftoverskot enn venta dei næraste åra – NRK Vestland
+INFO:root:Relevant article: NVE ber Statnett sjå på ny trasé – NRK Vestland
+INFO:root:Relevant articles: 10, Not relevant articles: 0
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 10 relevant articles to database. 201 - {"message":"10 records created/updated."}
+INFO:root:Completed processing for front page: nrkNyheterFornybarEnergi1.14530755_front_page.py
+INFO:root:Processing front page: ta_front_page.py
+INFO:root:Filtered articles for ta_front_page.py: 32
+INFO:root:Sending 211 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Øyunn (37) er død: «Hennes historie viser hvor urettferdig livet kan være»
+INFO:root:Not relevant article: Malerfirma slo seg konkurs: – Det er for få jobber i markedet
+INFO:root:Not relevant article: Kjørte på sårbar person med vilje: – Det er ikke tilfeldig
+INFO:root:Not relevant article: Rykket ut på gressbrann
+INFO:root:Not relevant article: Mattilsynet har fått 200 meldinger om hestene på ridesenteret: – Ikke noe her som får varsellampene til å blinke
+INFO:root:Not relevant article: 600.000 i Norge kan bli berørt: Advarer mot svindel
+INFO:root:Not relevant article: Dette skal Julie Bergan gjøre nå: – Ekstra gøy
+INFO:root:Not relevant article: Ordføreren er sykemeldt
+INFO:root:Not relevant article: Selger bruktbiler for 53 millioner: – Jeg har ikke noen plan B
+INFO:root:Not relevant article: Godkjenner ny og større hytte: – Bedre for alle
+INFO:root:Relevant article: Godkjenner ny og større hytte: – Bedre for alle
+INFO:root:Relevant article: Vil fjerne Norgespris og strømstøtte når du trenger den mest
+INFO:root:Relevant article: Mobiliserer: – Vi trenger mer kraft, nå!
+INFO:root:Relevant articles: 3, Not relevant articles: 208
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 3 relevant articles to database. 201 - {"message":"3 records created/updated."}
+INFO:root:Completed processing for front page: ta_front_page.py
+INFO:root:Processing front page: smaaleneneMeninger_front_page.py
+WARNING:root:No data found for smaaleneneMeninger_front_page.py. Skipping this entry.
+INFO:root:Processing front page: dtMeninger_front_page.py
+INFO:root:Filtered articles for dtMeninger_front_page.py: 32
+ERROR:root:Error processing articles - Exception occurred: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 44, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 186, in _process_articles
+    article_domain = only_get_domain_name(front_page_article.get('url', ''))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/scrapers/scarping_graph_ai_setup.py", line 63, in only_get_domain_name
+    domain = domain.split(':')[0]
+             ^^^^^^^^^^^^^^^^^
+TypeError: a bytes-like object is required, not 'str'
+INFO:root:Completed processing for front page: dtMeninger_front_page.py
+INFO:root:Processing front page: aftenbladet_front_page.py
+INFO:root:Filtered articles for aftenbladet_front_page.py: 32
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+Error: get_article_info not found in auto_scrapers/__init__.py
+WARNING:root:Invalid data for article __init__.py. Skipping.
+INFO:root:Sending 108 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Boligprisene stiger - åtte rogalandskommuner på topplista
+INFO:root:Not relevant article: Herfra har hun kontroll på hele byen
+INFO:root:Relevant article: Vil lage månevann fra Månafossen. Nå har han fått svar
+INFO:root:Not relevant article: Fikk drømmen knust etter hjernerystelse – da kom tårene: – Trist!
+INFO:root:Not relevant article: Gull-Thoresen med knallhard Oilers-dom: – Det er dårlig håndverk
+INFO:root:Not relevant article: – Slik skal ikke frontruten se ut
+INFO:root:Not relevant article: Vi har anmeldt årets påskekrim: Tre av dem får femmere
+INFO:root:Not relevant article:
+INFO:root:Not relevant article: Sjekk sprekingene som deltok i løpet rundt Hålandsvatnet
+INFO:root:Not relevant article: Prestisjeduell: Ingebrigtsen møter erkerivalen
+INFO:root:Not relevant article: Full priskrig før påske: – Vi går tomme lenge før tiden
+INFO:root:Relevant article: Equinor til Sandnes? Dette spektakulære prosjektet ble vraket
+INFO:root:Relevant article: Trump-sjokket: Dette mener ekspertene er verst for Rogaland
+INFO:root:Relevant article: Fishglobe gikk fra 4,5 til 210 mill. på ett år – kan måtte flagge ut av landet
+INFO:root:Relevant article: Sier ja til golf-lys i Sandnes: – Det første i Norge
+INFO:root:Relevant article: La fram klimamelding på Rosenberg: – De vet hva omstilling er for noe
+INFO:root:Relevant article: - Snart klart for Utsira Nord-konkurransen
+INFO:root:Relevant article: Ny prislapp for gigantprosjektet
+INFO:root:Relevant article: Sender Trumps handelskrig Oljefondets verdi ned, må norske politikere velge noe vekk
+INFO:root:Relevant articles: 9, Not relevant articles: 99
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 9 relevant articles to database. 201 - {"message":"9 records created/updated."}
+INFO:root:Completed processing for front page: aftenbladet_front_page.py
+INFO:root:Processing front page: ringblad_front_page.py
+INFO:root:Filtered articles for ringblad_front_page.py: 32
+INFO:root:Sending 244 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Direktesport
+INFO:root:Not relevant article: Skulle bli Norges største pizzeria. Nå er restauranten konkurs
+INFO:root:Not relevant article: Kommer med påske-advarsel
+INFO:root:Not relevant article: Rykket ut til ungdomsskole etter dramatisk melding
+INFO:root:Not relevant article: Dømt til fengsel etter narko-beslag
+INFO:root:Not relevant article: Stenger E16-tunnel i tre uker
+INFO:root:Not relevant article: Vil øke antall fastleger i Jevnaker, men har et praktisk problem
+INFO:root:Not relevant article: Anslår å ha brukt 1,3 millioner på bussen: – Skal rulle hele natten
+INFO:root:Not relevant article: Førte til full stans i togtrafikken
+INFO:root:Not relevant article: Innrømmer seksuell omgang med hester: –⁠ Jeg angrer
+INFO:root:Relevant article: – I dag faller prisene, dette har vi ventet på
+INFO:root:Relevant article: Føie-sjefen slutter
+INFO:root:Relevant articles: 2, Not relevant articles: 242
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 2 relevant articles to database. 201 - {"message":"2 records created/updated."}
+INFO:root:Completed processing for front page: ringblad_front_page.py
+INFO:root:Processing front page: aftenpostenMeningerLeder_front_page.py
+INFO:root:Filtered articles for aftenpostenMeningerLeder_front_page.py: 32
+INFO:root:Sending 100 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Not relevant article: Totalt useriøst
+INFO:root:Not relevant article: PR-rådgiver gir dårlige råd
+INFO:root:Not relevant article: De vil rettsforfølge andre politikere. Men når de selv blir tatt, er det «heksejakt».
+INFO:root:Not relevant article: Velkommen etter, Kennedy
+INFO:root:Not relevant article: Lippestad roter med fredsprisen
+INFO:root:Not relevant article: Dette er en sprø hevnstrategi
+INFO:root:Not relevant article: Tvangsinnleggelse kan være helt nødvendig
+INFO:root:Not relevant article: Fra Nordpolen til Sydpolen på 45 minutter. Godt at Nansen og Amundsen slipper å høre om det.
+INFO:root:Not relevant article: Det er bedre med ti fødsler i Drammen, enn én i Oslo
+INFO:root:Not relevant article: Det er ingen grunn til å plage folk og fe på denne måten
+INFO:root:Relevant article: Totalt useriøst fra Vedum og Listhaug
+INFO:root:Relevant article: Trumps handelskriger er ren idioti
+INFO:root:Relevant article: Musk bør stanses. Men ikke av Oljefondet.
+INFO:root:Relevant article: Trump provoserer, men USA må holdes inne
+INFO:root:Relevant article: Nei til norgespris
+INFO:root:Relevant article: Alle kjøper elbil. Det er en miljøseier for avgiftspolitikken.
+INFO:root:Relevant articles: 6, Not relevant articles: 94
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 6 relevant articles to database. 201 - {"message":"6 records created/updated."}
+INFO:root:Completed processing for front page: aftenpostenMeningerLeder_front_page.py
+INFO:root:Processing front page: energiognatur_front_page.py
+INFO:root:Filtered articles for energiognatur_front_page.py: 32
+ERROR:root:Error processing articles - Exception occurred: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 44, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/generate_all_data.py", line 186, in _process_articles
+    article_domain = only_get_domain_name(front_page_article.get('url', ''))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/innblikk/job-generate-all-data/src/scrapers/scarping_graph_ai_setup.py", line 63, in only_get_domain_name
+    domain = domain.split(':')[0]
+             ^^^^^^^^^^^^^^^^^
+TypeError: a bytes-like object is required, not 'str'
+INFO:root:Completed processing for front page: energiognatur_front_page.py
+INFO:root:Processing front page: nrkKlima_front_page.py
+INFO:root:Filtered articles for nrkKlima_front_page.py: 32
+INFO:root:Sending 28 articles to be processed
+INFO:root:Entity action task: START - add article
+INFO:root:Relevant article: Internasjonal skipsfart inngår klimaavtale – USA truer med tiltak
+INFO:root:Relevant article: 100 millionar kroner til landstraumanlegg i Flåm
+INFO:root:Relevant article: Kraftige reaksjoner på at regjeringen ikke legger frem mål om utslippskutt i Norge
+INFO:root:Relevant article: Alarm om oksygennivået i fleire norske fjordar
+INFO:root:Not relevant article: Dødelige flommer rammer USA mens værtjenesten mangler folk
+INFO:root:Not relevant article: Minst 150.000 husdyr druknet i enorm flom i Australia
+INFO:root:Not relevant article: Kraftig økning i forsikringsutbetalinger etter vannskader
+INFO:root:Not relevant article: Storm og øsregn har preget Solkysten – tre års tørke er historie
+INFO:root:Relevant article: Høgsterett sender klimasøksmålet tilbake til lagmannsretten
+INFO:root:Relevant article: Internasjonal skipsfart inngår klimaavtale – USA truer med tiltak
+INFO:root:Not relevant article: Påskeværet 2025: Påsken kom for sent
+INFO:root:Relevant article: Femdoblet prisen for restavfall – fikk ned søppelmengden
+INFO:root:Relevant article: 100 millionar kroner til landstraumanlegg i Flåm
+INFO:root:Relevant article: Her får el-brøytebilen den ultimate testen på Sør-Norges mest krevende fjellovergang
+INFO:root:Relevant article: Internasjonal skipsfart inngår klimaavtale – USA truer med tiltak – NRK – Klima
+INFO:root:Not relevant article: Dødelige flommer rammer USA mens værtjenesten mangler folk – NRK – Klima
+INFO:root:Not relevant article: Minst 150.000 husdyr druknet i enorm flom i Australia – NRK – Klima
+INFO:root:Not relevant article: Kraftig økning i forsikringsutbetalinger etter vannskader – NRK – Klima
+INFO:root:Not relevant article: Storm og øsregn har preget Solkysten – tre års tørke er historie – NRK – Klima
+INFO:root:Not relevant article: Slik blir påskeværet 2025 – NRK Troms og Finnmark
+INFO:root:Relevant articles: 18, Not relevant articles: 10
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:No vector found for content. creating a new one. or Vector length does not match expected dimension 1024.
+INFO:root:Added 18 relevant articles to database. 201 - {"message":"18 records created/updated."}
+INFO:root:Completed processing for front page: nrkKlima_front_page.py
+INFO:root:Data generation result: {'message': 'Data generation task completed successfully'}
+INFO:root:generate all data job completed
