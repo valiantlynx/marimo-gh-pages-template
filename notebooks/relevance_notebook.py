@@ -1,18 +1,21 @@
+
+
 import marimo
 
-__generated_with = "0.12.10"
+__generated_with = "0.13.0"
 app = marimo.App(width="medium")
 
 
 @app.cell
 def _():
     import marimo as mo
-    return (mo,)
+    return
 
 
 @app.cell
-def _(requests):
+def _():
     from pathlib import Path
+    import requests
 
     def read_log_file(log_file_path):
         """Read log file from either local path or URL"""
@@ -33,7 +36,7 @@ def _(requests):
                 raise Exception(f"Log file not found: {log_file_path}")
             except Exception as e:
                 raise Exception(f"Failed to read log file: {e}")
-    return Path, read_log_file
+    return (read_log_file,)
 
 
 @app.cell
@@ -114,7 +117,7 @@ def _():
             'total_irrelevant': total_irrelevant,
             'running_scripts': running_scripts
         }
-    return datetime, parse_log_data, re
+    return (parse_log_data,)
 
 
 @app.cell
@@ -127,16 +130,16 @@ def _():
     def generate_plotly_visualizations(data):
         # Create a list of figures to return
         figures = []
-    
+
         # 1. Overall Relevance Pie Chart
         total_relevant = data['total_relevant']
         total_irrelevant = data['total_irrelevant']
         total = total_relevant + total_irrelevant
-    
+
         if total > 0:
             labels = ['Relevant', 'Not Relevant']
             values = [total_relevant, total_irrelevant]
-        
+
             fig1 = go.Figure(data=[go.Pie(
                 labels=labels,
                 values=values,
@@ -148,13 +151,13 @@ def _():
                 annotations=[dict(text=f'{total} Articles', x=0.5, y=0.5, font_size=20, showarrow=False)]
             )
             figures.append(fig1)
-    
+
         # 2. Script Status Summary
         status_counts = {'completed': 0, 'failed': 0, 'no_data': 0, 'started': 0}
         for script in data['scripts']:
             status = data['scripts'][script]['status']
             status_counts[status] += 1
-    
+
         fig2 = go.Figure(data=[go.Bar(
             x=list(status_counts.keys()),
             y=list(status_counts.values()),
@@ -166,7 +169,7 @@ def _():
             yaxis_title='Count'
         )
         figures.append(fig2)
-    
+
         # 3. Per-Script Relevance
         if data['scripts']:
             # Convert to DataFrame for easier plotting
@@ -179,19 +182,19 @@ def _():
                     'total': stats.get('total', 0),
                     'status': stats.get('status', 'unknown')
                 })
-        
+
             script_df = pd.DataFrame(script_df)
             if not script_df.empty:
                 # Sort by total articles
                 script_df = script_df.sort_values('total', ascending=False)
-            
+
                 # Keep top 10 scripts for readability
                 if len(script_df) > 10:
                     script_df = script_df.head(10)
                     title = 'Top 10 Scripts by Article Count'
                 else:
                     title = 'Scripts by Article Count'
-            
+
                 fig3 = go.Figure()
                 fig3.add_trace(go.Bar(
                     x=script_df['script'],
@@ -205,7 +208,7 @@ def _():
                     name='Not Relevant',
                     marker_color='#fc8d62'
                 ))
-            
+
                 fig3.update_layout(
                     title_text=title,
                     xaxis_title='Script',
@@ -214,7 +217,7 @@ def _():
                     xaxis={'tickangle': 45}
                 )
                 figures.append(fig3)
-    
+
         # 4. Relevance Rate by Script
         if data['scripts']:
             relevance_rates = []
@@ -225,7 +228,7 @@ def _():
                     relevance_rate = (stats.get('relevant', 0) / total) * 100
                     relevance_rates.append(relevance_rate)
                     script_names.append(script)
-        
+
             if relevance_rates:
                 # Create DataFrame and sort
                 rate_df = pd.DataFrame({
@@ -233,14 +236,14 @@ def _():
                     'relevance_rate': relevance_rates
                 })
                 rate_df = rate_df.sort_values('relevance_rate', ascending=False)
-            
+
                 # Keep top 10 for readability
                 if len(rate_df) > 10:
                     rate_df = rate_df.head(10)
                     title = 'Top 10 Scripts by Relevance Rate'
                 else:
                     title = 'Scripts by Relevance Rate'
-            
+
                 fig4 = go.Figure(data=[
                     go.Bar(
                         x=rate_df['script'],
@@ -255,9 +258,9 @@ def _():
                     xaxis={'tickangle': 45}
                 )
                 figures.append(fig4)
-    
+
         return figures
-    return generate_plotly_visualizations, go, make_subplots, pd, px
+    return (generate_plotly_visualizations,)
 
 
 @app.cell
@@ -269,25 +272,25 @@ def _(generate_plotly_visualizations, parse_log_data, read_log_file):
             # Read log file
             log_text = read_log_file(log_file_path)
 
-        
+
             # Parse log data
             data = parse_log_data(log_text)
-        
+
             # Handle empty data safely
             total_articles = data['total_relevant'] + data['total_irrelevant']
-        
+
             # Print summary
             print(f"Total relevant articles: {data['total_relevant']}")
             print(f"Total irrelevant articles: {data['total_irrelevant']}")
-        
+
             # Avoid division by zero
             if total_articles > 0:
                 print(f"Relevance ratio: {data['total_relevant'] / total_articles * 100:.2f}%")
             else:
                 print("Relevance ratio: N/A (no articles processed)")
-        
+
             print(f"Total scripts processed: {len(data['scripts'])}")
-        
+
             # Count script statuses
             status_counts = {'completed': 0, 'failed': 0, 'no_data': 0}
             for script in data['scripts']:
@@ -297,42 +300,32 @@ def _(generate_plotly_visualizations, parse_log_data, read_log_file):
                     status_counts[status] += 1
                 else:
                     status_counts['failed'] += 1
-        
+
             print(f"Scripts completed successfully: {status_counts['completed']}")
             print(f"Scripts failed: {status_counts['failed']}")
             print(f"Scripts with no data: {status_counts['no_data']}")
-        
+
             # Generate and display plotly figures
             figures = generate_plotly_visualizations(data)
-        
+
             # Display the figures
             for fig in figures:
                 fig.show()
-            
+
             return data  # Return the data for further analysis if needed
-        
+
         except Exception as e:
             print(f"Error analyzing log: {str(e)}")
             import traceback
             traceback.print_exc()
 
-    return main, os
+    return (main,)
 
 
 @app.cell
-def _(main, mo):
-    import sys
-
-    # Default log file path
-    # Handle both local and remote paths for cache
-    log_file_path = str(mo.notebook_location() / "public" / "scraper_log.txt")
-
-    # Check for command line arguments
-    if len(sys.argv) > 1:
-        log_file_path = sys.argv[1]
-
+def _(log_file_path, main):
     main(log_file_path)
-    return log_file_path, sys
+    return
 
 
 if __name__ == "__main__":
