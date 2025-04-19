@@ -9,7 +9,7 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
-    return
+    return (mo,)
 
 
 @app.cell
@@ -323,7 +323,11 @@ def _(generate_plotly_visualizations, parse_log_data, read_log_file):
 
 
 @app.cell
-def _(log_file_path, main):
+def _(main, mo):
+    # Default log file path
+    # Handle both local and remote paths for cache
+    log_file_path = str(mo.notebook_location() / "public" / "scraper_log.txt")
+
     main(log_file_path)
     return
 
