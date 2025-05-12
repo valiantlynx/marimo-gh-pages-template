@@ -21,7 +21,10 @@
 import marimo
 
 __generated_with = "0.13.6"
-app = marimo.App(width="columns")
+app = marimo.App(
+    width="columns",
+    layout_file="layouts/rocket_league.grid.json",
+)
 
 
 @app.cell(column=0)
