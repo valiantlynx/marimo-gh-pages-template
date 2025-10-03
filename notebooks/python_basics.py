@@ -1,133 +1,71 @@
-import marimo
+import marimo as mo
 
 __generated_with = "0.13.6"
-app = marimo.App(width="medium")
+app = mo.App(width="medium")
 
 @app.cell
 
-def _():
-    """# Python Basics Overview
+def _intro_md():
+    mo.md(
+        """
+# Introduction to Python Basics
 
-Welcome to a quick introduction to Python! In this notebook we’ll cover:
-- Variables and data types
-- Basic operators
-- Control flow: if/else, loops
-- Functions and modules
-- A couple of interactive examples using marimo UI.
+This notebook walks through Python core concepts in an interactive way. Each cell demonstrates a building block—from variables and types to control flow and functions.
 """
+    )
     return
 
 @app.cell
 
-def _():
-    """## Variables and Data Types
-
-Python automatically infers the type of a variable when you assign a value to it.
-
-```python
-name = "Alice"          # str
-age = 30                # int
-height = 1.7            # float
-is_student = False      # bool
-```
-
-You can check the type using `type()`.
-```
-print(type(name))
-```
-"""
-    return
+def _variables_and_types():
+    a = 10           # integer
+    b = 2.5          # float
+    c = "Hello"     # string
+    d = True         # boolean
+    return a, b, c, d
 
 @app.cell
 
-def _():
-    """## Basic Operators
-
-Python supports arithmetic, comparison, and logical operators.
-```
-# Arithmetic
-sum_value = 3 + 5        # 8
-
-# Comparison
-print(5 > 2)            # True
-
-# Logical
-print(True and False)   # False
-```
-"""
-    return
+def _operators():
+    a, b = 10, 2.5
+    sum_val = a + b
+    diff_val = a - b
+    prod_val = a * b
+    div_val = a / b
+    comp_val = a > b
+    return sum_val, diff_val, prod_val, div_val, comp_val
 
 @app.cell
 
-def _():
-    """## Control Flow
-
-Conditional statements:
-```
-if age > 18:
-    print("Adult")
-else:
-    print("Minor")
-```
-
-Loops:
-```
-# For loop
-for i in range(5):
-    print(i)
-
-# While loop
-count = 0
-while count < 3:
-    print(count)
-    count += 1
-```
-"""
-    return
-
-@app.cell
-
-def _():
-    """## Functions
-
-Define reusable code blocks with `def`.
-```
-def greet(person):
-    return f"Hello, {person}!"
-
-print(greet("Bob"))
-```
-You can also use default arguments and keyword arguments.
-```
-def add(a, b=10):
-    return a + b
-
-print(add(5))   # 15
-print(add(5, 20))  # 25
-```
-"""
-    return
-
-@app.cell
-
-def _(mo):
-    mo.md("## Quick Interactive Demo: Toggle a Boolean")
-    return
-
-@app.cell
-
-def _(mo):
-    toggle = mo.ui.toggle(label="Toggle", value=False)
-    return toggle
-
-@app.cell
-
-def _(toggle):
-    if toggle.value:
-        toggle.md("The toggle is **ON**!")
+def _conditionals():
+    a = 10
+    if a > 5:
+        result = "a is greater than 5"
     else:
-        toggle.md("The toggle is **OFF**.")
-    return
+        result = "a is 5 or less"
+    return result
+
+@app.cell
+
+def _loops():
+    fruits = ["apple", "banana", "cherry"]
+    for f in fruits:
+        print(f"Found fruit: {f}")
+    return fruits
+
+@app.cell
+
+def _functions():
+    def greet(person):
+        return f"Hello, {person}!"
+    return greet
+
+@app.cell
+
+def _basic_io():
+    message = "This is a simple print statement."
+    print(message)
+    return message
 
 if __name__ == "__main__":
     app.run()
